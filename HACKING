@@ -1,0 +1,34 @@
+# SOURCE
+│
+└── distroinfo
+    ├── __init__.py   - keep this clean, put stuff into submodules
+    ├── info.py       - public interface
+    ├── fetch.py      - info fetchers
+    ├── helpers.py    - common helpers
+    ├── parse.py      - info parsing (port of rdoinfo builtin parser)
+    ├── repoman.py    - (git) repository manager
+    ├── query.py      - info queries (port of rdopkg.actionmods.rdoinfo)
+    └── exception.py  - all exceptions in one place
+
+
+# TESTS
+│
+├── tests
+│   ├── assets
+│   │   └── info
+│   │       ├── rdoinfo  - copy of rdoinfo, includes sync script
+│   │       └── broken   - broken infos for testing
+│   └── unit
+│       ├── test_rdoinfo.py  - tests ensuring rdoinfo compatibility
+│       ├── test_core.py     - tests ensuring core functionality
+│       └── test_common.py   - shared test code
+└── tox.ini  - use `tox` to run tests
+
+
+# PACKAGING
+│
+├── setup.cfg              - declarative python packaging config
+├── setup.py               - we're using pbr, so look into setup.cfg
+├── requirements.txt
+├── test-requirements.txt
+└── LICENSE

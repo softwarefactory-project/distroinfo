@@ -1,0 +1,5 @@
+This is a static copy of rdoinfo info files used for testing.
+
+You can sync these files from rdoinfo using supplied script:
+
+    $ ./sync_from_rdoinfo.sh

@@ -16,15 +16,22 @@ friendly, that is.
 
 ## STATUS
 
-`distroinfo` **DEVELOPMENT JUST STARTED**
+`distroinfo` is **READY FOR ALPHA TESTING IN THE WILD**
 
-**ETA:** following weeks (kinda-high priority)
+rdoinfo compatibility is ensured through offline and online tests.
+
+CI is ready to be enabled.
+
+More features, documentation, and packaging are on the way.
+
+See [distroinfo reviews](https://softwarefactory-project.io/dashboard/project_distroinfo).
 
 Use github
 [Issues](https://github.com/softwarefactory-project/distroinfo/issues)
 to make requests and report bugs.
 
-Poke `jruzicka` on `#rdo` Freenode IRC for more information.
+Poke `jruzicka` on `#softwarefactory` or `#rdo` Freenode IRC for more
+information.
 
 
 ## Installation
