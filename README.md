@@ -16,9 +16,11 @@ friendly, that is.
 
 ## STATUS
 
-`distroinfo` **DEVELOPMENT JUST STARTED**
+`distroinfo` **DEVELOPMENT IN PROGRESS**
 
-**ETA:** following weeks (kinda-high priority)
+Working prototype is being polished and covered with tests.
+
+See [distroinfo reviews](https://softwarefactory-project.io/dashboard/project_distroinfo).
 
 Use github
 [Issues](https://github.com/softwarefactory-project/distroinfo/issues)
