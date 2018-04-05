@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a43c5e1_e0733cb3",
+        "filename": "distroinfo/fetch.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-04-05T10:15:33Z",
+      "side": 1,
+      "message": "This fails to pass py3 unit tests, need to change it to:\n\nfrom distroinfo import exception",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 16
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a43c5e1_00798893",
+        "filename": "distroinfo/info.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-04-05T10:15:33Z",
+      "side": 1,
+      "message": "These fail in python 3, need to use \"from distroinfo import...\"",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 12
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a43c5e1_c072c0ad",
+        "filename": "distroinfo/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-04-05T10:15:33Z",
+      "side": 1,
+      "message": "from distroinfo import...",
+      "range": {
+        "startLine": 5,
+        "startChar": 7,
+        "endLine": 5,
+        "endChar": 16
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a43c5e1_806598e2",
+        "filename": "distroinfo/query.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-04-05T10:15:33Z",
+      "side": 1,
+      "message": "from distroinfo import...",
+      "range": {
+        "startLine": 5,
+        "startChar": 2,
+        "endLine": 5,
+        "endChar": 16
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
