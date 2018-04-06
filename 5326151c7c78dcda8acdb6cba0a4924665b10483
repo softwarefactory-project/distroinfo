@@ -71,6 +71,29 @@
     },
     {
       "key": {
+        "uuid": "5a43c5e1_231a8e18",
+        "filename": "distroinfo/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-04-06T08:18:06Z",
+      "side": 1,
+      "message": "I was thinking... Right now when we use apply_tag, we assume that just a single tag can be used. Would it be possible to allow multiple tags to be passed, and filter the package based on all tags?\n\nThis would allow some advanced filtering, like saying \"I want all packages with the rocky-uc tag + the prodchain-critical tag\". With that, we would only care about those for certain operations.",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 40
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_806598e2",
         "filename": "distroinfo/query.py",
         "patchSetId": 2
