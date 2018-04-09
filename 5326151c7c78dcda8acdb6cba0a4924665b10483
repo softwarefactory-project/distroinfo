@@ -191,6 +191,30 @@
     },
     {
       "key": {
+        "uuid": "5a43c5e1_51aa0472",
+        "filename": "distroinfo/info.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-09T17:45:44Z",
+      "side": 1,
+      "message": "I was thinking about names for these three for quite some time :) This naming comes from basic separation of Local and Remote fetchers and then distinguishes Git from Raw fetcher. Yet, \"raw\" isn\u0027t very helpful here. To general.\n\nHTTP is too strict, any requests-supported URL should work.\n\nBut I was considering just RemoteFetcher, especially as it\u0027s going to be preferred over git.\n\nSo RemoteFetcher it is.",
+      "parentUuid": "5a43c5e1_7172a07e",
+      "range": {
+        "startLine": 21,
+        "startChar": 46,
+        "endLine": 21,
+        "endChar": 66
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_c072c0ad",
         "filename": "distroinfo/parse.py",
         "patchSetId": 2
@@ -297,6 +321,30 @@
       "side": 1,
       "message": "Ok, well I was thinking that we should have a strict format and if an information is needed by one to be described in the distroinfo format then either that something relevant to be described for a distro / or that\u0027s an information that must be defined outsite of distroinfo. For the former, then one must ask for a support in distroinfo. If the format is strict then we know that every tools that rely on distroinfo understand the same interface. It seems important imo.",
       "parentUuid": "5a43c5e1_f181d04e",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 61
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a43c5e1_91ce4c59",
+        "filename": "distroinfo/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-09T17:45:44Z",
+      "side": 1,
+      "message": "I see your point Fabien, but if we enforced strict format in distroinfo like that, we would esentially end with renamed rdoinfo. You can be sure if there are ever other *info instances, they\u0027ll have their unique fields and requirements.\n\nIOW enforcing strict data structure on distroinfo level will prevent it from being reusable. We should do what you say on rdoinfo level, that is strictly define the fields we expect there and validate. if someone is happy with rdoinfo format, (s)he can use the same validator on his/her instance to ensure compatibility with rdoinfo format.\n\nHowever, when rdoinfo format isn\u0027t fitting user\u0027s needs, he can just create his own distroinfo-based format by creating a new validator defining rule for that *info.\n\nSo there would be:\n- generic distroinfo module (parser, basic validator)\n- generic and extendable distroinfo format (validated by distroinfo module)\n- strict rdoinfo format (validated by rdoinfo validator based on voluptuous/cerberus schema -\u003e we need to create that yet as a next step)\n- rdoinfo repo with actual data and possibly its various forks using the common rdoinfo format ensured by common validator\n\nI wonder if the rdoinfo validator should live alongside rdoinfo data... probably not, because that would tempt people to fork the validator alongside with info data and that would lead to N different formats where N is the number of *info instances.\n\nEither way, I\u0027m pretty certain that specification of rdoinfo data structure shouldn\u0027t be part of distroinfo, changes to rdoinfo format MUST NOT require a new release of distroinfo parser.",
+      "parentUuid": "5a43c5e1_1131dca2",
       "range": {
         "startLine": 21,
         "startChar": 0,
