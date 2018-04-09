@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "5a43c5e1_110a3cd3",
+        "filename": "distroinfo/info.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-04-09T14:37:37Z",
+      "side": 1,
+      "message": "Actually, this is a good idea for cases like the upstream OpenStack infra, where they do not want to depend on stuff hosted on GitHub. By having this option, we could host the rdoinfo repo on trunk.rdoproject.org, and have it used directly (and cached by the infra mirrors).",
+      "parentUuid": "5a43c5e1_51b6843e",
+      "range": {
+        "startLine": 21,
+        "startChar": 46,
+        "endLine": 21,
+        "endChar": 66
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_c072c0ad",
         "filename": "distroinfo/parse.py",
         "patchSetId": 2
@@ -213,6 +237,30 @@
     },
     {
       "key": {
+        "uuid": "5a43c5e1_d113740c",
+        "filename": "distroinfo/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-04-09T14:37:37Z",
+      "side": 1,
+      "message": "+1 to Jakub\u0027s idea. Having a somewhat loose validation allows us to add hacks like specific tags for packages, without the need to change anything on the actual Python code required to interpret it.",
+      "parentUuid": "5a43c5e1_f181d04e",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 61
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_231a8e18",
         "filename": "distroinfo/parse.py",
         "patchSetId": 2
@@ -248,6 +296,30 @@
       "side": 1,
       "message": "Everything is possible, but current implementation is very basic, see substitute_package(pkg) above.\n\nI don\u0027t quite understand what you mean by \"filter the package based on all tags\" in the context of apply_tag.\n\nNote that filtering by tag and applying tag are two different things:\n- applying a tag substitutes strings in package template effectively creating a new info instance for a particular tag. applying multiple tags is possible but I\u0027d suggest writing new code for that.\n- filtering by tags: there is query.filter_pkgs(pkgs, rexen) but again it\u0027s rather simple and it doesn\u0027t support this use case. Being able to select like that is a reasonable request, so I reckon either extending that function or new dedicated filter_pkgs_by_tags().",
       "parentUuid": "5a43c5e1_231a8e18",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 40
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a43c5e1_71f940c8",
+        "filename": "distroinfo/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-04-09T14:37:37Z",
+      "side": 1,
+      "message": "My request is more related to filtering, sorry for the confusion. So yes, if possible it would be great to be able to filter by more than one tag.\n\nThat said, it\u0027s more of a roadmap thing than a request for this initial implementation.",
+      "parentUuid": "5a43c5e1_3155f8c5",
       "range": {
         "startLine": 88,
         "startChar": 0,
