@@ -167,6 +167,30 @@
     },
     {
       "key": {
+        "uuid": "5a43c5e1_7172a07e",
+        "filename": "distroinfo/info.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-09T14:41:37Z",
+      "side": 1,
+      "message": "Ok, this is what I though. The name is not so clear why not RemoteHTTPFetcher or simply RemoteFetcher ?",
+      "parentUuid": "5a43c5e1_51b6843e",
+      "range": {
+        "startLine": 21,
+        "startChar": 46,
+        "endLine": 21,
+        "endChar": 66
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_c072c0ad",
         "filename": "distroinfo/parse.py",
         "patchSetId": 2
@@ -248,6 +272,30 @@
       "writtenOn": "2018-04-09T14:37:37Z",
       "side": 1,
       "message": "+1 to Jakub\u0027s idea. Having a somewhat loose validation allows us to add hacks like specific tags for packages, without the need to change anything on the actual Python code required to interpret it.",
+      "parentUuid": "5a43c5e1_f181d04e",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 61
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a43c5e1_1131dca2",
+        "filename": "distroinfo/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-09T14:41:37Z",
+      "side": 1,
+      "message": "Ok, well I was thinking that we should have a strict format and if an information is needed by one to be described in the distroinfo format then either that something relevant to be described for a distro / or that\u0027s an information that must be defined outsite of distroinfo. For the former, then one must ask for a support in distroinfo. If the format is strict then we know that every tools that rely on distroinfo understand the same interface. It seems important imo.",
       "parentUuid": "5a43c5e1_f181d04e",
       "range": {
         "startLine": 21,
