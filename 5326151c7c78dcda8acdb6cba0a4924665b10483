@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "5a43c5e1_91ac0cef",
+        "filename": "distroinfo/fetch.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-09T14:16:35Z",
+      "side": 1,
+      "message": "Yes, I forgot to menition this, py3 compat is also TODO :)",
+      "parentUuid": "5a43c5e1_e31106b1",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 16
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_00798893",
         "filename": "distroinfo/info.py",
         "patchSetId": 2
@@ -83,6 +107,30 @@
       "writtenOn": "2018-04-06T13:20:49Z",
       "side": 1,
       "message": "What is RemoteRawInfoFetcher ?",
+      "range": {
+        "startLine": 21,
+        "startChar": 46,
+        "endLine": 21,
+        "endChar": 66
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a43c5e1_51b6843e",
+        "filename": "distroinfo/info.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-09T14:16:35Z",
+      "side": 1,
+      "message": "For fetching remote raw info files :) As in getting the files directly through HTTP(S) without the need to sync entire git repo which is currently bottleneck for all rdoinfo-related operations and it\u0027s constantly slowing down as rdoinfo repo grows. It\u0027s currently almost 1.7 k commits.\n\nI stole this idea from jjoyce\u0027s rdo.py script which fetches info this way and also caches it for extra speed.",
+      "parentUuid": "5a43c5e1_031752a4",
       "range": {
         "startLine": 21,
         "startChar": 46,
@@ -141,6 +189,30 @@
     },
     {
       "key": {
+        "uuid": "5a43c5e1_f181d04e",
+        "filename": "distroinfo/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-09T14:16:35Z",
+      "side": 1,
+      "message": "Actually, I was testing Cerberus for this purpose and I\u0027m not convinced it\u0027s worth the extra requirement.\n\nhttp://docs.python-cerberus.org/\n\ndistroinfo doesn\u0027t require extremely strict data, only few top level sections and few fields are required here and there but the rest is upto the user. These are already handled with custom exceptions, so I don\u0027t quite see the benefit of more complex schema validator.\n\nAs of clearer schema understanding, I plan to describe it using human language and examples in documentation.\n\nHaving docs and tests in one code sounds good and I also tested that but problem was cerberus was validating exact schema but I only wanted to ensure few key fields are as expected and not care about the rest which was surprisingly simpler to do by hand.\n\nI really wanted to use (play with) a validator, but I didn\u0027t see a very strong use case here, especially due to distroinfo not dictating much of the data structure, that is done by various *info instances like rdoinfo.\n\nSo I think we should use validation for rdoinfo specifically where some structure is in fact expected but it isn\u0027t documented anywhere.",
+      "parentUuid": "5a43c5e1_63265618",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 61
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_231a8e18",
         "filename": "distroinfo/parse.py",
         "patchSetId": 2
@@ -152,6 +224,30 @@
       "writtenOn": "2018-04-06T08:18:06Z",
       "side": 1,
       "message": "I was thinking... Right now when we use apply_tag, we assume that just a single tag can be used. Would it be possible to allow multiple tags to be passed, and filter the package based on all tags?\n\nThis would allow some advanced filtering, like saying \"I want all packages with the rocky-uc tag + the prodchain-critical tag\". With that, we would only care about those for certain operations.",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 40
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a43c5e1_3155f8c5",
+        "filename": "distroinfo/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-09T14:16:35Z",
+      "side": 1,
+      "message": "Everything is possible, but current implementation is very basic, see substitute_package(pkg) above.\n\nI don\u0027t quite understand what you mean by \"filter the package based on all tags\" in the context of apply_tag.\n\nNote that filtering by tag and applying tag are two different things:\n- applying a tag substitutes strings in package template effectively creating a new info instance for a particular tag. applying multiple tags is possible but I\u0027d suggest writing new code for that.\n- filtering by tags: there is query.filter_pkgs(pkgs, rexen) but again it\u0027s rather simple and it doesn\u0027t support this use case. Being able to select like that is a reasonable request, so I reckon either extending that function or new dedicated filter_pkgs_by_tags().",
+      "parentUuid": "5a43c5e1_231a8e18",
       "range": {
         "startLine": 88,
         "startChar": 0,
@@ -198,6 +294,23 @@
       "writtenOn": "2018-04-06T13:20:49Z",
       "side": 1,
       "message": "Good idea to define those facilities here :)",
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a43c5e1_11631cb3",
+        "filename": "distroinfo/query.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-09T14:16:35Z",
+      "side": 1,
+      "message": "this is strangely specific... hmm :-/",
       "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
