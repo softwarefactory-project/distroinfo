@@ -357,6 +357,30 @@
     },
     {
       "key": {
+        "uuid": "5a43c5e1_ac1f6b5a",
+        "filename": "distroinfo/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-10T08:49:20Z",
+      "side": 1,
+      "message": "I thought the experience we have acquired between rdoinfo and sfinfo will help us defining a sane and pretty complete format in distroinfo. Having to fork distroinfo to let say (for sf usecase) to re-create sfinfo with more fields and validation + having to support that fork in DLRN too will make the migration harder. I don\u0027t see why rdoinfo format\u0027s fields cannot be valuable for usecases outside RDO. Anyway that was just my opinion :) sure I wont block on that :). Could be nice to have feedback from other interested folk on that aspect.",
+      "parentUuid": "5a43c5e1_91ce4c59",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 61
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_231a8e18",
         "filename": "distroinfo/parse.py",
         "patchSetId": 2
