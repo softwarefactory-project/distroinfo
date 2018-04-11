@@ -381,6 +381,30 @@
     },
     {
       "key": {
+        "uuid": "3a50d1a3_bcb481d1",
+        "filename": "distroinfo/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 201
+      },
+      "writtenOn": "2018-04-11T12:48:11Z",
+      "side": 1,
+      "message": "High-level comment: it would be still good to have a schema for documentation purposes and voluptuous would be preferred since it seems more maintained and already in openstack global-requirements (both are packaged in Fedora).\nFull validation would be optional, only really required data should fail the loading of distroinfo.",
+      "parentUuid": "5a43c5e1_ac1f6b5a",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 61
+      },
+      "revId": "5326151c7c78dcda8acdb6cba0a4924665b10483",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_231a8e18",
         "filename": "distroinfo/parse.py",
         "patchSetId": 2
