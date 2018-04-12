@@ -77,7 +77,7 @@ class GitRepoManager(object):
         assert self.url
         with self.repo_dir():
             remotes = git('remote', '-v')
-        pattern = '^origin\s+%s\s+\(fetch\)$' % re.escape(self.url)
+        pattern = r'^origin\s+%s\s+\(fetch\)$' % re.escape(self.url)
         if not re.search(pattern, remotes, re.MULTILINE):
             raise exception.RepoError(what="origin isn't set to expected URL: "
                                            "%s" % self.url)

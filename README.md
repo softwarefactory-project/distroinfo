@@ -4,11 +4,10 @@
 distribution/packaging metadata stored in human readable and reviewable
 text/YAML files.
 
-This is **SOON GOING TO BE** a proper generic (re)implementation of
-[rdoinfo](https://github.com/redhat-openstack/rdoinfo)
-parser which proved well suited for the task of interfacing with distribution
-metadata in a human friendly way. If you consider code reviews human
-friendly, that is.
+This is a proper generic (re)implementation of
+[rdoinfo](https://github.com/redhat-openstack/rdoinfo) parser which proved
+well suited for the task of interfacing with distribution metadata in a human
+friendly way. If you consider code reviews human friendly, that is.
 
 `distroinfo` is a part of
 [Software Factory project](https://softwarefactory-project.io/docs/)
