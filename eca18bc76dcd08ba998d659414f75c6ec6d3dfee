@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a50d1a3_3f0063aa",
+        "filename": "distroinfo/repoman.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-04-12T11:12:34Z",
+      "side": 1,
+      "message": "pycodestyle is complaining about the escape sequences \\s \\( \\), not sure why",
+      "range": {
+        "startLine": 80,
+        "startChar": 8,
+        "endLine": 80,
+        "endChar": 67
+      },
+      "revId": "eca18bc76dcd08ba998d659414f75c6ec6d3dfee",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
