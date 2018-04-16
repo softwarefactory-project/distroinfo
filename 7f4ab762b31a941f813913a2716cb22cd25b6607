@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a50d1a3_a559c490",
+        "filename": ".zuul.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-16T15:25:42Z",
+      "side": 1,
+      "message": "This no longer needed but still fine.",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 20
+      },
+      "revId": "7f4ab762b31a941f813913a2716cb22cd25b6607",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
