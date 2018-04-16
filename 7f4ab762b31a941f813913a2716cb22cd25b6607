@@ -22,6 +22,30 @@
       "revId": "7f4ab762b31a941f813913a2716cb22cd25b6607",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_454b20b1",
+        "filename": ".zuul.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-16T15:31:19Z",
+      "side": 1,
+      "message": "Good, removed. (I assume you mean the \u0027name\u0027 line only)",
+      "parentUuid": "3a50d1a3_a559c490",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 20
+      },
+      "revId": "7f4ab762b31a941f813913a2716cb22cd25b6607",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
