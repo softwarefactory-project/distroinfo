@@ -1,6 +1,7 @@
 import contextlib
 import os
 import subprocess
+import time
 
 from distroinfo import exception
 
@@ -25,6 +26,12 @@ def ensure_dir(path):
 
 def get_default_cache_base_path():
     return os.path.expanduser("~/.distroinfo/cache")
+
+
+def get_file_age(path):
+    t_mod = os.path.getctime(path)
+    t_now = time.time()
+    return t_now - t_mod
 
 
 def git(*cmd):
