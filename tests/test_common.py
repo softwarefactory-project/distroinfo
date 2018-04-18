@@ -1,11 +1,33 @@
-from distroinfo.info import DistroInfo
-from distroinfo import fetch
+import io
+import os
+import logging
+
 from distroinfo import query
 
 import test_common as common
 
 
-RDOINFO_GIT_URL = 'https://github.com/redhat-openstack/rdoinfo'
+ASSETS_PATH = u"tests/assets"
+INFO_ASSETS_PATH = u"%s/info" % ASSETS_PATH
+
+
+def get_test_info_path(name):
+    return os.path.join(INFO_ASSETS_PATH, name)
+
+
+def capture_distroinfo_logger():
+    log = logging.getLogger('distroinfo')
+    log.setLevel(logging.DEBUG)
+    log_stream = io.StringIO()
+    h = logging.StreamHandler(log_stream)
+    log.addHandler(h)
+    return log_stream
+
+
+def assert_dict_contains(tested, expected):
+    for key, val in expected.items():
+        assert key in tested
+        assert tested[key] == val
 
 
 def assert_rdoinfo_base(info):
@@ -67,39 +89,3 @@ def assert_rdoinfo_deps(info):
 def assert_rdoinfo_full(info):
     assert_rdoinfo_base(info)
     assert_rdoinfo_deps(info)
-
-
-def test_rdoinfo_base():
-    di = DistroInfo('rdo.yml',
-                    local_info=common.get_test_info_path('rdoinfo'))
-    info = di.get_info()
-    assert_rdoinfo_base(info)
-
-
-def test_rdoinfo_full():
-    di = DistroInfo('rdo-full.yml',
-                    local_info=common.get_test_info_path('rdoinfo'))
-    info = di.get_info()
-    assert_rdoinfo_full(info)
-
-
-def test_rdoinfo_merge():
-    di = DistroInfo(['rdo.yml', 'deps.yml'],
-                    local_info=common.get_test_info_path('rdoinfo'))
-    info = di.get_info()
-    assert_rdoinfo_full(info)
-
-
-def test_rdoinfo_git_fetch(tmpdir):
-    git_di = DistroInfo('rdo-full.yml',
-                        remote_git_info=RDOINFO_GIT_URL,
-                        cache_base_path=str(tmpdir))
-    git_info = git_di.get_info()
-    assert_rdoinfo_full(git_info)
-    # also load and parse the local repo copy (cache) using local fetcher
-    cached_di = DistroInfo('rdo-full.yml',
-                           local_info=git_di.fetcher.repo.repo_path)
-    cached_info = cached_di.get_info()
-    assert_rdoinfo_full(cached_info)
-    # make sure results from both fetchers are identical
-    assert git_info == cached_info
