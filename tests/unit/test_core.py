@@ -2,7 +2,7 @@ from distroinfo import exception
 from distroinfo.info import DistroInfo
 import pytest
 
-import test_common as common
+import tests.test_common as common
 
 
 def test_invalid_info_file():

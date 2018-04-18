@@ -33,6 +33,12 @@
     run: playbooks/py3-tests.yaml
 
 - job:
+    name: distroinfo-integration
+    parent: distroinfo-base-py2
+    description: distroinfo integration tests with rdoinfo
+    run: playbooks/integration.yaml
+
+- job:
     name: distroinfo-codestyle
     parent: distroinfo-base-py2
     description: distroinfo code style checks
@@ -43,11 +49,13 @@
       jobs:
         - distroinfo-py2-centos-7
         - distroinfo-py3-fedora-27
+        - distroinfo-integration
         - distroinfo-codestyle
     gate:
       jobs:
         - distroinfo-py2-centos-7
         - distroinfo-py3-fedora-27
+        - distroinfo-integration
         - distroinfo-codestyle
     release:
       jobs:
