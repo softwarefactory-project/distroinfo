@@ -6,6 +6,8 @@ import test_common as common
 
 
 RDOINFO_GIT_URL = 'https://github.com/redhat-openstack/rdoinfo'
+RDOINFO_RAW_URL = ('https://raw.githubusercontent.com/'
+                   'redhat-openstack/rdoinfo/master/')
 
 
 def assert_rdoinfo_base(info):
@@ -90,6 +92,21 @@ def test_rdoinfo_merge():
     assert_rdoinfo_full(info)
 
 
+def test_rdoinfo_remote_fetch(tmpdir):
+    remote_di = DistroInfo('rdo-full.yml',
+                           remote_info=RDOINFO_RAW_URL,
+                           cache_base_path=str(tmpdir))
+    remote_info = remote_di.get_info()
+    assert_rdoinfo_full(remote_info)
+    # also load and parse the local repo copy (cache) using local fetcher
+    cached_di = DistroInfo('rdo-full.yml',
+                           local_info=remote_di.fetcher.cache_path)
+    cached_info = cached_di.get_info()
+    assert_rdoinfo_full(cached_info)
+    # make sure results from both fetchers are identical
+    assert remote_info == cached_info
+
+
 def test_rdoinfo_git_fetch(tmpdir):
     git_di = DistroInfo('rdo-full.yml',
                         remote_git_info=RDOINFO_GIT_URL,
@@ -98,7 +115,7 @@ def test_rdoinfo_git_fetch(tmpdir):
     assert_rdoinfo_full(git_info)
     # also load and parse the local repo copy (cache) using local fetcher
     cached_di = DistroInfo('rdo-full.yml',
-                           local_info=git_di.fetcher.repo.repo_path)
+                           local_info=git_di.fetcher.cache_path)
     cached_info = cached_di.get_info()
     assert_rdoinfo_full(cached_info)
     # make sure results from both fetchers are identical

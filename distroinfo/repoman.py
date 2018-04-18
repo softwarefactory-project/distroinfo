@@ -10,7 +10,7 @@ from distroinfo.helpers import git
 
 
 logging.basicConfig(level=logging.ERROR)
-log = logging.getLogger("distroinfo-repo")
+log = logging.getLogger("distroinfo")
 
 
 class GitRepoManager(object):
