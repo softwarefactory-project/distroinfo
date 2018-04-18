@@ -65,3 +65,7 @@ class CommandNotFound(DistroInfoException):
 
 class CommandFailed(DistroInfoException):
     msg_fmt = "Command failed with return code %(code)s: %(cmd)s"
+
+
+class RemoteFetchError(DistroInfoException):
+    msg_fmt = "Failed to fetch remote file: %(code)s %(reason)s %(url)s"
