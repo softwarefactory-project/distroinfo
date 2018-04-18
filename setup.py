@@ -14,5 +14,6 @@ except ImportError:
 
 
 setuptools.setup(
-    setup_requires=['pbr'],
+    setup_requires=['pbr', 'pytest-runner'],
+    tests_require=['pytest'],
     pbr=True)
