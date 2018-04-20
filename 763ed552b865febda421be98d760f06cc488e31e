@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "fa1b9901_fd99a320",
+        "filename": "distroinfo/fetch.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-20T19:50:20Z",
+      "side": 1,
+      "message": "Yeah I wanted to disable logging by default. Perhaps this isn\u0027t the nice way to do it?\n\nUnit tests change this level and capture the everything (DEBUG) for assertion purposes but I don\u0027t think anything should be logged to stdout by default.",
+      "parentUuid": "fa1b9901_9d34274b",
+      "revId": "763ed552b865febda421be98d760f06cc488e31e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa1b9901_7d3cb32f",
         "filename": "distroinfo/fetch.py",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-04-20T17:11:23Z",
       "side": 1,
       "message": "Does it support internal distroinfo include stanza too ?",
+      "revId": "763ed552b865febda421be98d760f06cc488e31e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa1b9901_9d9e6706",
+        "filename": "distroinfo/fetch.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-20T19:50:20Z",
+      "side": 1,
+      "message": "Yes, inherited from InfoFetcher. It fetches and caches the specfied file and all its includes as needed. Fetched info files are available under original file names in the cache directory.",
+      "parentUuid": "fa1b9901_7d3cb32f",
       "revId": "763ed552b865febda421be98d760f06cc488e31e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -94,6 +130,24 @@
       "writtenOn": "2018-04-20T17:11:23Z",
       "side": 1,
       "message": "For test stability I think that\u0027s better to mock python request and provide a fixture directory and avoid remote over internet.",
+      "revId": "763ed552b865febda421be98d760f06cc488e31e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa1b9901_1d9337fc",
+        "filename": "tests/unit/test_rdoinfo.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-20T19:50:20Z",
+      "side": 1,
+      "message": "Tests that don\u0027t focus on fetcher themselves use offline rdoinfo copy.\n\nThis is more integration tests, maybe there should be separate files for offline and online tets? Or even separate tox targets?",
+      "parentUuid": "fa1b9901_5d3f6f25",
       "revId": "763ed552b865febda421be98d760f06cc488e31e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
