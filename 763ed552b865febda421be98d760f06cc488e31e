@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "da20952f_99251b5e",
+        "filename": "distroinfo/fetch.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-23T14:27:12Z",
+      "side": 1,
+      "message": "Code that use distroinfo will set the logger to the right log level if distroinfo logging is not relevant for their use case. So I\u0027m pretty sure you shouldn\u0027t set the level there. Maybe you can also mainly use log.debug instead of log.info to make it less chatty. Code that use distroinfo will set top level logger to info by default.",
+      "parentUuid": "fa1b9901_fd99a320",
+      "revId": "763ed552b865febda421be98d760f06cc488e31e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa1b9901_7d3cb32f",
         "filename": "distroinfo/fetch.py",
         "patchSetId": 1
@@ -148,6 +166,24 @@
       "side": 1,
       "message": "Tests that don\u0027t focus on fetcher themselves use offline rdoinfo copy.\n\nThis is more integration tests, maybe there should be separate files for offline and online tets? Or even separate tox targets?",
       "parentUuid": "fa1b9901_5d3f6f25",
+      "revId": "763ed552b865febda421be98d760f06cc488e31e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da20952f_b9e1ff00",
+        "filename": "tests/unit/test_rdoinfo.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-23T14:27:12Z",
+      "side": 1,
+      "message": "Why do we need online tests ? Is there some code that cannot be mocked ?",
+      "parentUuid": "fa1b9901_1d9337fc",
       "revId": "763ed552b865febda421be98d760f06cc488e31e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
