@@ -223,6 +223,24 @@
       "revId": "763ed552b865febda421be98d760f06cc488e31e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da20952f_ffcbd71c",
+        "filename": "tests/unit/test_rdoinfo.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-25T12:31:19Z",
+      "side": 1,
+      "message": "Ok I understand. I\u0027m fine if we have them separated like in tests/functional/test_rdoinfo.py instead or whatever. We should be able to run the default tox target w/o them.",
+      "parentUuid": "da20952f_5f6d2331",
+      "revId": "763ed552b865febda421be98d760f06cc488e31e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
