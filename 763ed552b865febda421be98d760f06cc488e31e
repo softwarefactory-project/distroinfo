@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "da20952f_7f6a671c",
+        "filename": "distroinfo/fetch.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-25T11:31:26Z",
+      "side": 1,
+      "message": "OK, I\u0027ll leave it at default in next patchset.",
+      "parentUuid": "da20952f_99251b5e",
+      "revId": "763ed552b865febda421be98d760f06cc488e31e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa1b9901_7d3cb32f",
         "filename": "distroinfo/fetch.py",
         "patchSetId": 1
@@ -184,6 +202,24 @@
       "side": 1,
       "message": "Why do we need online tests ? Is there some code that cannot be mocked ?",
       "parentUuid": "fa1b9901_1d9337fc",
+      "revId": "763ed552b865febda421be98d760f06cc488e31e",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da20952f_5f6d2331",
+        "filename": "tests/unit/test_rdoinfo.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-04-25T11:31:26Z",
+      "side": 1,
+      "message": "These are tests to ensure compatibility with current rdoinfo. \n\nA developer should be able to check whether the code works with current rdoinfo or not. A gate should also check whether new code doesn\u0027t break compat with rdoinfo for every commit.\n\nMocking the online part out would completely defeat the purpose of these tests.",
+      "parentUuid": "da20952f_b9e1ff00",
       "revId": "763ed552b865febda421be98d760f06cc488e31e",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
