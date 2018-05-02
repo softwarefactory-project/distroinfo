@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba15a1d1_01a670c1",
+        "filename": "tests/test_common.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 201
+      },
+      "writtenOn": "2018-05-02T19:27:54Z",
+      "side": 1,
+      "message": "If it contains rdoinfo specific tests, should this file be called test_rdoinfo_common.py ?",
+      "revId": "622430686faabfb36d3be293a21e326bce89934f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
