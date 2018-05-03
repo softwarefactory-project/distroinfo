@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "ba15a1d1_011750a4",
+        "filename": "distroinfo/fetch.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-05-03T08:09:34Z",
+      "side": 1,
+      "message": "maybe using urljoin would be safer here",
+      "revId": "622430686faabfb36d3be293a21e326bce89934f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba15a1d1_61264c18",
+        "filename": "distroinfo/fetch.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-05-03T08:09:34Z",
+      "side": 1,
+      "message": "This assumes this will always be used without authentication (or basic auth passed within the source url), and in the case of https with a remote using a trusted certificate. If that\u0027s not necessarily the case you might want to support at least the verify argument in some way.",
+      "revId": "622430686faabfb36d3be293a21e326bce89934f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba15a1d1_01a670c1",
         "filename": "tests/test_common.py",
         "patchSetId": 6
@@ -13,6 +47,24 @@
       "writtenOn": "2018-05-02T19:27:54Z",
       "side": 1,
       "message": "If it contains rdoinfo specific tests, should this file be called test_rdoinfo_common.py ?",
+      "revId": "622430686faabfb36d3be293a21e326bce89934f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba15a1d1_81236005",
+        "filename": "tests/test_common.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-05-03T08:09:34Z",
+      "side": 1,
+      "message": "+1 for clarity",
+      "parentUuid": "ba15a1d1_01a670c1",
       "revId": "622430686faabfb36d3be293a21e326bce89934f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
