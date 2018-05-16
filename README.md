@@ -15,13 +15,14 @@ friendly way. If you consider code reviews human friendly, that is.
 
 ## STATUS
 
-`distroinfo` is **READY FOR ALPHA TESTING IN THE WILD**
+`distroinfo` is available from Fedora/EPEL repos and is **BEING INTEGRATED**.
 
-rdoinfo compatibility is ensured through offline and online tests.
+[rdopkg](https://github.com/softwarefactory-project/rdopkg) and
+[DLRN](https://github.com/softwarefactory-project/DLRN) are first adopters.
 
-CI is ready to be enabled.
+`rdoinfo` compatibility is ensured through offline and online tests.
 
-More features, documentation, and packaging are on the way.
+CI is enabled.
 
 See [distroinfo reviews](https://softwarefactory-project.io/dashboard/project_distroinfo).
 
@@ -38,7 +39,7 @@ information.
 
 ### from source
 
-If you want to hack `ditroinfo` or just have the latest code without waiting
+If you want to hack `distroinfo` or just have the latest code without waiting
 for next release, you can use the git repo directly:
 
     git clone https://github.com/softwarefactory-project/distroinfo
@@ -65,19 +66,45 @@ Required python modules are listed in
 
 ### from Fedora/EPEL repos (default)
 
-**TODO:** `distroinfo` is going to hit Fedora/EPEL repos as soon as it's
-ready.
+`distroinfo` is available on **Fedora 27** and newer:
+
+    dnf install python2-distroinfo
+
+including Python 3 version:
+
+    dnf install python3-distroinfo
+
+On CentOS/RHEL 7, `distroinfo` is available from
+[EPEL](https://fedoraproject.org/wiki/EPEL).
+
+On **CentOS 7**:
+
+    yum install epel-release
+    yum install python2-distroinfo
+
+On **RHEL 7**:
+
+    yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    yum install python2-distroinfo
 
 
 ### from PyPI
 
-**TODO**:
+For your convenience, `distroinfo` is available from the Cheese Shop:
 
-For your convenience, `distroinfo` is also **GOING TO BE** available from the
-Cheese Shop **as soon as ready**.
-
-    # TODO: NOT YET
     pip install distroinfo
+
+
+## Usage
+
+Until proper documentation is in place, please refer to:
+
+* [rdoinfo](https://github.com/redhat-openstack/rdoinfo) for prime example of
+  `distroinfo` format usage
+* [rdoinfo integration tests](https://github.com/softwarefactory-project/distroinfo/blob/master/tests/integration/test_rdoinfo_online.py)
+  for code examples
+* [distroinfo.info](https://github.com/softwarefactory-project/distroinfo/blob/master/distroinfo/info.py)
+  to RTFS
 
 
 ## Bugs
