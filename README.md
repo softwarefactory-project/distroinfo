@@ -15,13 +15,16 @@ friendly way. If you consider code reviews human friendly, that is.
 
 ## STATUS
 
-`distroinfo` is **READY FOR ALPHA TESTING IN THE WILD**
+`distroinfo` is **READY FOR INTEGRATION**
 
-rdoinfo compatibility is ensured through offline and online tests.
+[rdopkg](https://github.com/softwarefactory-project/rdopkg) and
+[DLRN](https://github.com/softwarefactory-project/DLRN) are first adopters.
 
-CI is ready to be enabled.
+`rdoinfo` compatibility is ensured through offline and online tests.
 
-More features, documentation, and packaging are on the way.
+CI is enabled.
+
+Documentation and RPM packaging in progress.
 
 See [distroinfo reviews](https://softwarefactory-project.io/dashboard/project_distroinfo).
 
@@ -71,14 +74,21 @@ ready.
 
 ### from PyPI
 
-**TODO**:
+For your convenience, `distroinfo` is available from the Cheese Shop:
 
-For your convenience, `distroinfo` is also **GOING TO BE** available from the
-Cheese Shop **as soon as ready**.
-
-    # TODO: NOT YET
     pip install distroinfo
 
+
+## Usage
+
+Until proper documentation is in place, please refer to:
+
+* [rdoinfo](https://github.com/redhat-openstack/rdoinfo) for prime example of
+  `distroinfo` format usage
+* [rdoinfo integration tests](https://github.com/softwarefactory-project/distroinfo/blob/master/tests/integration/test_rdoinfo_online.py)
+  for code examples
+* [distroinfo.info](https://github.com/softwarefactory-project/distroinfo/blob/master/distroinfo/info.py)
+  to RTFS
 
 ## Bugs
 
