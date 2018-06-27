@@ -40,7 +40,7 @@ class DuplicatedProject(InvalidInfoFormat):
 
 
 class CircularInfoInclude(InvalidInfoFormat):
-    msg_fmt = "Circular info include: %(info1)s -> %(info2)s"
+    msg_fmt = "Circular info include: %(info)s"
 
 
 class InvalidQuery(DistroInfoException):
@@ -49,6 +49,11 @@ class InvalidQuery(DistroInfoException):
 
 class InvalidPackageFilter(DistroInfoException):
     msg_fmt = "Invalid package filter: %(why)s"
+
+
+class InvalidRemoteInfoRef(DistroInfoException):
+    msg_fmt = ("Remote info referenced but not defined in 'remote-info' "
+               "section: %(remote)s")
 
 
 class RepoError(DistroInfoException):

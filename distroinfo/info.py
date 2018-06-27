@@ -43,6 +43,7 @@ class DistroInfo(object):
                     cache_base_path=cache_base_path)
             else:
                 raise exception.InfoFetcherRequired()
+        self.fetcher.di_class = DistroInfo
         self.info_files = info_files
 
         if isinstance(self.info_files, six.string_types):
