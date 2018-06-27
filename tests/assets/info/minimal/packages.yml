@@ -1,0 +1,191 @@
+packages:
+- project: puppet-keystone
+  conf: rpmfactory-puppet
+  buildsys-tags:
+    cloud7-openstack-newton-testing: puppet-keystone-9.6.0-1.el7
+    cloud7-openstack-newton-release: puppet-keystone-9.6.0-1.el7
+    cloud7-openstack-ocata-testing: puppet-keystone-10.4.0-1.el7
+    cloud7-openstack-ocata-release: puppet-keystone-10.4.0-1.el7
+    cloud7-openstack-pike-testing: puppet-keystone-11.4.0-1.el7
+    cloud7-openstack-pike-release: puppet-keystone-11.4.0-1.el7
+    cloud7-openstack-queens-testing: puppet-keystone-12.4.0-1.el7
+    cloud7-openstack-queens-release: puppet-keystone-12.4.0-1.el7
+- project: puppet-nova
+  conf: rpmfactory-puppet
+  maintainers:
+  - sven@redhat.com
+  buildsys-tags:
+    cloud7-openstack-newton-testing: puppet-nova-9.7.0-1.el7
+    cloud7-openstack-newton-release: puppet-nova-9.7.0-1.el7
+    cloud7-openstack-ocata-testing: puppet-nova-10.5.0-1.el7
+    cloud7-openstack-ocata-release: puppet-nova-10.5.0-1.el7
+    cloud7-openstack-pike-testing: puppet-nova-11.5.1-1.el7
+    cloud7-openstack-pike-release: puppet-nova-11.5.1-1.el7
+    cloud7-openstack-queens-testing: puppet-nova-12.4.0-1.el7
+    cloud7-openstack-queens-release: puppet-nova-12.4.0-1.el7
+- project: nova
+  conf: rpmfactory-core
+  maintainers:
+  - sahid.ferdjaoui@redhat.com
+  - sven@redhat.com
+  buildsys-tags:
+    cloud7-openstack-newton-testing: openstack-nova-14.1.0-1.el7
+    cloud7-openstack-newton-release: openstack-nova-14.1.0-1.el7
+    cloud7-openstack-ocata-testing: openstack-nova-15.1.3-1.el7
+    cloud7-openstack-ocata-release: openstack-nova-15.1.3-1.el7
+    cloud7-openstack-pike-testing: openstack-nova-16.1.4-1.el7
+    cloud7-openstack-pike-release: openstack-nova-16.1.4-1.el7
+    cloud7-openstack-queens-testing: openstack-nova-17.0.5-1.el7
+    cloud7-openstack-queens-release: openstack-nova-17.0.5-1.el7
+- project: keystone
+  conf: rpmfactory-core
+  maintainers:
+  - apevec@redhat.com
+  tags:
+    rocky-py3-uc:
+      distgit: https://github.com/openstack/rpm-packaging
+      distgit-path: /openstack/keystone
+      master-distgit: https://github.com/openstack/rpm-packaging
+      distro-branch: master
+    rocky-uc:
+    rocky:
+    queens:
+    pike:
+    ocata:
+    newton:
+  buildsys-tags:
+    cloud7-openstack-newton-testing: openstack-keystone-10.0.3-1.el7
+    cloud7-openstack-newton-release: openstack-keystone-10.0.3-1.el7
+    cloud7-openstack-ocata-testing: openstack-keystone-11.0.3-1.el7
+    cloud7-openstack-ocata-release: openstack-keystone-11.0.3-1.el7
+    cloud7-openstack-pike-testing: openstack-keystone-12.0.0-1.el7
+    cloud7-openstack-pike-release: openstack-keystone-12.0.0-1.el7
+    cloud7-openstack-queens-testing: openstack-keystone-13.0.0-1.el7
+    cloud7-openstack-queens-release: openstack-keystone-13.0.0-1.el7
+- project: keystoneclient
+  conf: rpmfactory-client
+  tags:
+    rocky-py3-uc:
+      source-branch: 3.16.0
+    rocky-uc:
+      source-branch: 3.16.0
+    rocky:
+    queens:
+      source-branch: 3.15.0
+    pike:
+      source-branch: 3.13.0
+    ocata:
+      source-branch: 3.10.0
+    newton:
+      source-branch: 3.5.1
+  buildsys-tags:
+    cloud7-openstack-newton-testing: python-keystoneclient-3.5.1-1.el7
+    cloud7-openstack-newton-release: python-keystoneclient-3.5.1-1.el7
+    cloud7-openstack-ocata-testing: python-keystoneclient-3.10.0-1.el7
+    cloud7-openstack-ocata-release: python-keystoneclient-3.10.0-1.el7
+    cloud7-openstack-pike-testing: python-keystoneclient-3.13.0-1.el7
+    cloud7-openstack-pike-release: python-keystoneclient-3.13.0-1.el7
+    cloud7-openstack-queens-testing: python-keystoneclient-3.15.0-1.el7
+    cloud7-openstack-queens-release: python-keystoneclient-3.15.0-1.el7
+- project: novaclient
+  conf: rpmfactory-client
+  tags:
+    rocky-py3-uc:
+      source-branch: 10.3.0
+    rocky-uc:
+      source-branch: 10.3.0
+    rocky:
+    queens:
+      source-branch: 10.1.0
+    pike:
+      source-branch: 9.1.2
+    ocata:
+      source-branch: 7.1.2
+    newton:
+      source-branch: 6.0.2
+  buildsys-tags:
+    cloud7-openstack-newton-testing: python-novaclient-6.0.2-1.el7
+    cloud7-openstack-newton-release: python-novaclient-6.0.2-1.el7
+    cloud7-openstack-ocata-testing: python-novaclient-7.1.2-1.el7
+    cloud7-openstack-ocata-release: python-novaclient-7.1.2-1.el7
+    cloud7-openstack-pike-testing: python-novaclient-9.1.2-1.el7
+    cloud7-openstack-pike-release: python-novaclient-9.1.2-1.el7
+    cloud7-openstack-queens-testing: python-novaclient-10.1.0-1.el7
+    cloud7-openstack-queens-release: python-novaclient-10.1.0-1.el7
+- project: swiftclient
+  conf: rpmfactory-client
+  tags:
+    rocky-py3-uc:
+      source-branch: 3.5.0
+    rocky-uc:
+      source-branch: 3.5.0
+    rocky:
+    queens:
+      source-branch: 3.5.0
+    pike:
+      source-branch: 3.4.0
+    ocata:
+      source-branch: 3.3.0
+    newton:
+      source-branch: 3.1.0
+  buildsys-tags:
+    cloud7-openstack-newton-testing: python-swiftclient-3.1.0-1.el7
+    cloud7-openstack-newton-release: python-swiftclient-3.1.0-1.el7
+    cloud7-openstack-ocata-testing: python-swiftclient-3.3.0-1.el7
+    cloud7-openstack-ocata-release: python-swiftclient-3.3.0-1.el7
+    cloud7-openstack-pike-testing: python-swiftclient-3.4.0-1.el7
+    cloud7-openstack-pike-release: python-swiftclient-3.4.0-1.el7
+    cloud7-openstack-queens-testing: python-swiftclient-3.5.0-1.el7
+    cloud7-openstack-queens-release: python-swiftclient-3.5.0-1.el7
+- project: keystonemiddleware
+  conf: rpmfactory-client
+  upstream: git://git.openstack.org/openstack/%(project)s
+  tags:
+    rocky-py3-uc:
+      source-branch: 5.1.0
+    rocky-uc:
+      source-branch: 5.1.0
+    rocky:
+    queens:
+      source-branch: 4.21.0
+    pike:
+      source-branch: 4.17.0
+    ocata:
+      source-branch: 4.14.0
+    newton:
+      source-branch: 4.9.1
+  buildsys-tags:
+    cloud7-openstack-newton-testing: python-keystonemiddleware-4.9.0-1.el7
+    cloud7-openstack-newton-release: python-keystonemiddleware-4.9.0-1.el7
+    cloud7-openstack-ocata-testing: python-keystonemiddleware-4.14.0-1.el7
+    cloud7-openstack-ocata-release: python-keystonemiddleware-4.14.0-1.el7
+    cloud7-openstack-pike-testing: python-keystonemiddleware-4.17.0-1.el7
+    cloud7-openstack-pike-release: python-keystonemiddleware-4.17.0-1.el7
+    cloud7-openstack-queens-testing: python-keystonemiddleware-4.21.0-1.el7
+    cloud7-openstack-queens-release: python-keystonemiddleware-4.21.0-1.el7
+- project: keystoneauth1
+  tags:
+    rocky-py3-uc:
+      source-branch: 3.9.0
+    rocky-uc:
+      source-branch: 3.9.0
+    rocky:
+    queens:
+      source-branch: 3.4.0
+    pike:
+      source-branch: 3.1.0
+    ocata:
+      source-branch: 2.18.0
+    newton:
+      source-branch: 2.12.3
+  conf: rpmfactory-lib
+  upstream: git://github.com/openstack/keystoneauth
+  buildsys-tags:
+    cloud7-openstack-newton-testing: python-keystoneauth1-2.12.2-1.el7
+    cloud7-openstack-newton-release: python-keystoneauth1-2.12.2-1.el7
+    cloud7-openstack-ocata-testing: python-keystoneauth1-2.18.0-1.el7
+    cloud7-openstack-ocata-release: python-keystoneauth1-2.18.0-1.el7
+    cloud7-openstack-pike-testing: python-keystoneauth1-3.1.0-1.el7
+    cloud7-openstack-pike-release: python-keystoneauth1-3.1.0-1.el7
+    cloud7-openstack-queens-testing: python-keystoneauth1-3.4.0-1.el7
+    cloud7-openstack-queens-release: python-keystoneauth1-3.4.0-1.el7
