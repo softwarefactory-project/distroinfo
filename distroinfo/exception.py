@@ -51,6 +51,11 @@ class InvalidPackageFilter(DistroInfoException):
     msg_fmt = "Invalid package filter: %(why)s"
 
 
+class InvalidRemoteInfoRef(DistroInfoException):
+    msg_fmt = ("Remote info referenced but not defined in 'remote-info' "
+               "section: %(remote)s")
+
+
 class RepoError(DistroInfoException):
     msg_fmt = "Repository error: %(what)s"
 
