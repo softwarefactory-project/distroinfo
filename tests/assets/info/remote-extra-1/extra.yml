@@ -1,0 +1,10 @@
+package-default:
+  distgit: ssh://foo/python-%(project)s.git
+  extra-default-field: foo-default-%(project)s
+  tags:
+    footag
+
+package-configs:
+  rpmfactory-core:
+    patches: http://foopatches/%(project)s.git
+    extra-conf-field: foo-conf-%(project)s

@@ -1,6 +1,7 @@
 import hashlib
 import logging
 import os
+import re
 import requests
 import yaml
 
@@ -32,6 +33,9 @@ class InfoFetcher(object):
         self.source = source
         self.allow_import = allow_import
         self.fetching = set()
+        # DistroInfo will set this to DistroInfo class in order to allow
+        # recursive fetch without circular dependency.
+        self.di_class = None
 
     def get_file_content(self, fn):
         raise NotImplementedError()
@@ -40,21 +44,42 @@ class InfoFetcher(object):
         content = self.get_file_content(fn)
         return yaml.load(content)
 
-    def fetch(self, *info_files):
+    def fetch(self, *info_files, **kwargs):
         contents = []
+        remote_info = kwargs.get('remote_info', {})
         for ifn in info_files:
-            if ifn in self.fetching:
-                raise exception.CircularInfoInclude(fn=ifn)
-            info = self.get_file_data(ifn)
-            contents.append(info)
-            # handle includes recursively
-            imports = info.get('import', [])
-            if self.allow_import and imports:
-                self.fetching.add(ifn)
-                try:
-                    contents += self.fetch(*imports)
-                finally:
-                    self.fetching.remove(ifn)
+            if isinstance(ifn, dict):
+                # fetch remote info using a new DistroInfo instance
+                remote = ifn.keys()[0]
+                fn = ifn[remote]
+                ri = remote_info.get(remote)
+                if not ri:
+                    raise exception.InvalidRemoteInfoRef(remote=remote)
+                ri = ri.copy()
+                ri['info_files'] = '__remote_info__'
+                # this is the same as DistroInfo(**ri)
+                remote_di = self.di_class(**ri)
+                remote_contents = remote_di.fetcher.fetch(fn)
+                contents += remote_contents
+            else:
+                # import within this info repo
+                if ifn in self.fetching:
+                    raise exception.CircularInfoInclude(info=ifn)
+                info = self.get_file_data(ifn)
+                contents.append(info)
+                # collect remote-infos
+                remotes = info.get('remote-info', {})
+                if remotes:
+                    remote_info.update(remotes)
+                # handle includes recursively
+                imports = info.get('import', [])
+                if self.allow_import and imports:
+                    self.fetching.add(ifn)
+                    try:
+                        contents += self.fetch(*imports,
+                                               remote_info=remote_info)
+                    finally:
+                        self.fetching.remove(ifn)
         return contents
 
 

@@ -1,0 +1,7 @@
+remote-info:
+  extra:
+    local_info: tests/assets/info/remote-extra-1
+
+import:
+  - minimal.yml
+  - extra: extra.yml
