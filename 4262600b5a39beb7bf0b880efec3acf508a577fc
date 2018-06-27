@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7b5339ee_0107f8cf",
+        "filename": "tests/assets/info/minimal/remote.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 442
+      },
+      "writtenOn": "2018-06-27T19:01:29Z",
+      "side": 1,
+      "message": "Maybe consider a format of name: url. This would then become\nextra: tests/assets/info/remote-extra-1",
+      "range": {
+        "startLine": 2,
+        "startChar": 2,
+        "endLine": 3,
+        "endChar": 48
+      },
+      "revId": "4262600b5a39beb7bf0b880efec3acf508a577fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1235923f_9de07e1b",
+        "filename": "tests/assets/info/minimal/remote.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 442
+      },
+      "writtenOn": "2018-06-27T19:01:29Z",
+      "side": 1,
+      "message": "Maybe consider a list of name: file pairs, that would save you the regex processing. Also enforce a \u0027default\u0027 or \u0027base\u0027 that has to be in the list or an exception is raised.\n\nimport:\n - default: minimal.yml\n - extra: extra.yml\n - another: more.yml",
+      "range": {
+        "startLine": 6,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "4262600b5a39beb7bf0b880efec3acf508a577fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
