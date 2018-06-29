@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "f0ba5185_dc489dc7",
+        "filename": "tests/assets/info/minimal/remote.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 442
+      },
+      "writtenOn": "2018-06-29T16:00:40Z",
+      "side": 1,
+      "message": "That is a fair point. I wonder then if a little more formatting is needed. Something along the lines of:\n\nremotes:\n   extra:\n       type: local_info\n       uri: tests/assets/info/remote-extra-1\n   other:\n       type: remote_info\n       uri: https://www.mycoolsite/distroinfo\n\nThis is just a suggestion. I don\u0027t see anything wrong with the current format, but maybe seeing how it would scale to a few other remotes would help to convince me. :-)",
+      "parentUuid": "4fa8d1ed_4d2959b8",
+      "range": {
+        "startLine": 2,
+        "startChar": 2,
+        "endLine": 3,
+        "endChar": 48
+      },
+      "revId": "4262600b5a39beb7bf0b880efec3acf508a577fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1235923f_9de07e1b",
         "filename": "tests/assets/info/minimal/remote.yml",
         "patchSetId": 1
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "I considered that as a first option, but this has the advantage of each entry being a string (info_files is a vector of strings) and the same string could be passed to DistroInfo.fetcher.fetch and it would do the same thing.\n\nWith this suggestion, info_files would be a list of strings mixed with dicts... I prefer regex to type checks which aren\u0027t reccommended practice in python.\n\nI\u0027m 50:50 on this, needs more convincing ;)",
       "parentUuid": "1235923f_9de07e1b",
+      "range": {
+        "startLine": 6,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "4262600b5a39beb7bf0b880efec3acf508a577fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b59f0b6_48e384d5",
+        "filename": "tests/assets/info/minimal/remote.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 442
+      },
+      "writtenOn": "2018-06-29T16:00:40Z",
+      "side": 1,
+      "message": "If use these as key value pairs you can then match remote_info items to file that need to be imported, without have to worry about regex error handling. If someone incorrectly follows the format, the error could be non-obvious to the user. I find that string parsing can be very error prone at scale, with several edge cases needing to be accounted for as more information is added.\n\nUsing the key/value pair also keeps the file consistent in the import section and the remote-info section were key/values are being used. This makes validating the file in the future easier since a special case is not being injected.\n\nIf handling the key/value pairs is not desired. You could also look at special tag handlers that can be added to the constructor of the yaml parser. Then you do something like:\n\nimport:\n   - !importer extra extra.yml\n\nThe code for handling the \u0027!importer\u0027 tag could then format the data however it needs to be consumed. I have done something like this in the past and I am willing to help out, if this works better.",
+      "parentUuid": "37e7d3ca_ac25dce5",
       "range": {
         "startLine": 6,
         "startChar": 2,
