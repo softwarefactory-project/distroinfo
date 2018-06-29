@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4fa8d1ed_4d2959b8",
+        "filename": "tests/assets/info/minimal/remote.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-06-29T11:09:17Z",
+      "side": 1,
+      "message": "Nope, that\u0027s oversimplification. This dict is actually a **kwargs passed to DistroInfo constructor, so you can fully control your info repo setup through here. That includes passing local_info, remote_info or remote_git_info or even cache_ttl as needed - all this would be lost.",
+      "parentUuid": "7b5339ee_0107f8cf",
+      "range": {
+        "startLine": 2,
+        "startChar": 2,
+        "endLine": 3,
+        "endChar": 48
+      },
+      "revId": "4262600b5a39beb7bf0b880efec3acf508a577fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1235923f_9de07e1b",
         "filename": "tests/assets/info/minimal/remote.yml",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-06-27T19:01:29Z",
       "side": 1,
       "message": "Maybe consider a list of name: file pairs, that would save you the regex processing. Also enforce a \u0027default\u0027 or \u0027base\u0027 that has to be in the list or an exception is raised.\n\nimport:\n - default: minimal.yml\n - extra: extra.yml\n - another: more.yml",
+      "range": {
+        "startLine": 6,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "4262600b5a39beb7bf0b880efec3acf508a577fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "37e7d3ca_ac25dce5",
+        "filename": "tests/assets/info/minimal/remote.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-06-29T11:09:17Z",
+      "side": 1,
+      "message": "I considered that as a first option, but this has the advantage of each entry being a string (info_files is a vector of strings) and the same string could be passed to DistroInfo.fetcher.fetch and it would do the same thing.\n\nWith this suggestion, info_files would be a list of strings mixed with dicts... I prefer regex to type checks which aren\u0027t reccommended practice in python.\n\nI\u0027m 50:50 on this, needs more convincing ;)",
+      "parentUuid": "1235923f_9de07e1b",
       "range": {
         "startLine": 6,
         "startChar": 2,
