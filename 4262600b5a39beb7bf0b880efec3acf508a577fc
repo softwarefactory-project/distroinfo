@@ -141,6 +141,30 @@
       "revId": "4262600b5a39beb7bf0b880efec3acf508a577fc",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5c783c22_72c8dc82",
+        "filename": "tests/assets/info/minimal/remote.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 532
+      },
+      "writtenOn": "2018-06-29T17:12:16Z",
+      "side": 1,
+      "message": "Well, I would think the simpler route (involving a type check) is less error-prone for users and involves slightly less complicated code.\n\nType-checking has its uses. Python has it. Not all languages do.\n\nI\u0027d contend that this is one of the cases where performing a type check both valid and appropriate.",
+      "parentUuid": "8b59f0b6_48e384d5",
+      "range": {
+        "startLine": 6,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "4262600b5a39beb7bf0b880efec3acf508a577fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
