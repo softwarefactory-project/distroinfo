@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "fcc51d55_532dcc17",
+        "filename": "tests/assets/info/minimal/remote.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-07-02T16:02:40Z",
+      "side": 1,
+      "message": "I\u0027d keep this 1:1 with DistroInfo.__init__() arguments, so an example would be:\n\n    remotes:\n       extra:\n           local_info: /path/to/whatevers\n           cache_ttl: 1200\n       other:\n           remote_info: https://stuff.omg/whatevers\n           cache_ttls: 1600\n       other-git:\n           remote_git_info: git://suff.omg/whatevers.git\n\nWhich would map to:\n\n    DistroInfo(PASSED_FROM_IMPORT, local_info\u003d\u0027/path/to/whatevers\u0027, cache_ttl\u003d1200)\n\nWhile there isn\u0027t many useful arguments at this moment, this syntax requires no mapping/transofrmation and will work even when DistroInfo.__init__() changes without the need to update the module or the format itself.",
+      "parentUuid": "f0ba5185_dc489dc7",
+      "range": {
+        "startLine": 2,
+        "startChar": 2,
+        "endLine": 3,
+        "endChar": 48
+      },
+      "revId": "4262600b5a39beb7bf0b880efec3acf508a577fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1235923f_9de07e1b",
         "filename": "tests/assets/info/minimal/remote.yml",
         "patchSetId": 1
@@ -156,6 +180,30 @@
       "side": 1,
       "message": "Well, I would think the simpler route (involving a type check) is less error-prone for users and involves slightly less complicated code.\n\nType-checking has its uses. Python has it. Not all languages do.\n\nI\u0027d contend that this is one of the cases where performing a type check both valid and appropriate.",
       "parentUuid": "8b59f0b6_48e384d5",
+      "range": {
+        "startLine": 6,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "4262600b5a39beb7bf0b880efec3acf508a577fc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cb1932fc_e2c25ed5",
+        "filename": "tests/assets/info/minimal/remote.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-07-02T16:02:40Z",
+      "side": 1,
+      "message": "OK, I\u0027ll change to dict in next iteration.",
+      "parentUuid": "5c783c22_72c8dc82",
       "range": {
         "startLine": 6,
         "startChar": 2,
