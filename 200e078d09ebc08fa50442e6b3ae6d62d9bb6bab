@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2235ed7a_70810d87",
+        "filename": "distroinfo/fetch.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 442
+      },
+      "writtenOn": "2018-07-03T15:56:06Z",
+      "side": 1,
+      "message": "I think this is no longer needed.",
+      "revId": "200e078d09ebc08fa50442e6b3ae6d62d9bb6bab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
