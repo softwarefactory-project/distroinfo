@@ -9,6 +9,7 @@ def parse_info(raw_info, apply_tag=None):
     """
     Parse raw rdoinfo metadata inplace.
 
+    :param raw_info: raw info to parse
     :param apply_tag: tag to apply
     :returns: dictionary containing all packages in rdoinfo
     """
@@ -161,10 +162,78 @@ def _merge(a, b):
     return b
 
 
-def merge_infos(*infos):
+def list2dict(l, key):
+    d = collections.OrderedDict()
+    for i in l:
+        kv = i.get(key)
+        if kv in d:
+            d[kv] = _merge(d[kv], i)
+        else:
+            d[kv] = i
+    return d
+
+
+def info2dicts(info, in_place=False):
+    """
+    Return info with:
+
+    1) `packages` list replaced by a 'packages' dict indexed by 'project'
+    2) `releases` list replaced by a 'releases' dict indexed by 'name'
+    """
+    if 'packages' not in info and 'releases' not in info:
+        return info
+    if in_place:
+        info_dicts = info
+    else:
+        info_dicts = info.copy()
+    packages = info.get('packages')
+    if packages:
+        info_dicts['packages'] = list2dict(packages, 'project')
+    releases = info.get('releases')
+    if releases:
+        info_dicts['releases'] = list2dict(releases, 'name')
+    return info_dicts
+
+
+def info2lists(info, in_place=False):
+
+    """
+    Return info with:
+
+    1) `packages` dict replaced by a 'packages' list with indexes removed
+    2) `releases` dict replaced by a 'releases' list with indexes removed
+
+    info2list(info2dicts(info)) == info
+    """
+    if 'packages' not in info and 'releases' not in info:
+        return info
+    if in_place:
+        info_lists = info
+    else:
+        info_lists = info.copy()
+    packages = info.get('packages')
+    if packages:
+        info_lists['packages'] = packages.values()
+    releases = info.get('releases')
+    if releases:
+        info_lists['releases'] = releases.values()
+    return info_lists
+
+
+def merge_infos(*infos, **kwargs):
     if not infos:
-        return infos
-    info = infos[0]
-    for info2 in infos[1:]:
-        info = _merge(info, info2)
-    return info
+        return {}
+    if len(infos) < 2:
+        return infos[0]
+    info_dicts = kwargs.get('info_dicts', False)
+    in_place = kwargs.get('in_place', True)
+
+    info_dict = info2dicts(infos[0], in_place=in_place)
+    for info_next in infos[1:]:
+        info_next_dict = info2dicts(info_next, in_place=in_place)
+        info_dict = _merge(info_dict, info_next_dict)
+    if info_dicts:
+        # return info with dicts
+        return info_dict
+    # convert info back to lists format
+    return info2lists(info_dict, in_place=in_place)
