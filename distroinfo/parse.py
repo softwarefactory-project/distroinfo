@@ -9,6 +9,7 @@ def parse_info(raw_info, apply_tag=None):
     """
     Parse raw rdoinfo metadata inplace.
 
+    :param raw_info: raw info to parse
     :param apply_tag: tag to apply
     :returns: dictionary containing all packages in rdoinfo
     """
@@ -35,7 +36,9 @@ def parse_releases(info):
         raise exception.MissingRequiredSection(section='releases')
     if not isinstance(releases, collections.Iterable):
         raise exception.InvalidInfoFormat(
-            msg="'releases' section must be a list")
+            msg="'releases' section must be iterable")
+    if isinstance(releases, dict):
+        releases = releases.values()
     for rls in releases:
         try:
             rls_name = rls['name']
@@ -119,7 +122,7 @@ def parse_package(pkg, info, apply_tag=None):
     return pkg
 
 
-def check_for_duplicates(pkg, pkgs):
+def _check_for_duplicates(pkg, pkgs):
     for oldpkg in pkgs:
         if pkg['name'] == oldpkg['name']:
             return True
@@ -133,23 +136,34 @@ def parse_packages(info, apply_tag=None):
         raise exception.MissingRequiredSection(section='packages')
     if not isinstance(pkgs, collections.Iterable):
         raise exception.InvalidInfoFormat(
-            msg="'packages' section must be a list")
-
-    parsed_pkgs = []
+            msg="'packages' section must be iterable")
+    if isinstance(pkgs, dict):
+        # 'packages' is a dictionary
+        info_dicts = True
+        parsed_pkgs = collections.OrderedDict()
+        pkgs = pkgs.values()
+    else:
+        # 'packages' is a list
+        info_dicts = False
+        parsed_pkgs = []
+        seen_projects = []
     for pkg in pkgs:
         parsed_pkg = parse_package(pkg, info, apply_tag=apply_tag)
-        if check_for_duplicates(parsed_pkg, parsed_pkgs):
-            raise exception.DuplicatedProject(prj=parsed_pkg['name'])
+        project = parsed_pkg['project']
+        if info_dicts:
+            parsed_pkgs[project] = parsed_pkg
         else:
+            if project in seen_projects:
+                raise exception.DuplicatedProject(prj=parsed_pkg['project'])
+            seen_projects.append(project)
             parsed_pkgs.append(parsed_pkg)
-
     info['packages'] = parsed_pkgs
 
 
 def _merge(a, b):
     # recursively merge arbitrary data structures
     if isinstance(a, dict) and isinstance(b, dict):
-        m = dict(a)
+        m = a.copy()
         m.update({k: _merge(a.get(k, None), b[k]) for k in b})
         return m
 
@@ -161,10 +175,79 @@ def _merge(a, b):
     return b
 
 
-def merge_infos(*infos):
+def list2dict(l, key):
+    d = collections.OrderedDict()
+    for i in l:
+        kv = i.get(key)
+        if kv in d:
+            d[kv] = _merge(d[kv], i)
+        else:
+            d[kv] = i
+    return d
+
+
+def info2dicts(info, in_place=False):
+    """
+    Return info with:
+
+    1) `packages` list replaced by a 'packages' dict indexed by 'project'
+    2) `releases` list replaced by a 'releases' dict indexed by 'name'
+    """
+    if 'packages' not in info and 'releases' not in info:
+        return info
+    if in_place:
+        info_dicts = info
+    else:
+        info_dicts = info.copy()
+    packages = info.get('packages')
+    if packages:
+        info_dicts['packages'] = list2dict(packages, 'project')
+    releases = info.get('releases')
+    if releases:
+        info_dicts['releases'] = list2dict(releases, 'name')
+    return info_dicts
+
+
+def info2lists(info, in_place=False):
+
+    """
+    Return info with:
+
+    1) `packages` dict replaced by a 'packages' list with indexes removed
+    2) `releases` dict replaced by a 'releases' list with indexes removed
+
+    info2list(info2dicts(info)) == info
+    """
+    if 'packages' not in info and 'releases' not in info:
+        return info
+    if in_place:
+        info_lists = info
+    else:
+        info_lists = info.copy()
+    packages = info.get('packages')
+    if packages:
+        info_lists['packages'] = list(packages.values())
+    releases = info.get('releases')
+    if releases:
+        info_lists['releases'] = list(releases.values())
+    return info_lists
+
+
+def merge_infos(*infos, **kwargs):
     if not infos:
-        return infos
-    info = infos[0]
-    for info2 in infos[1:]:
-        info = _merge(info, info2)
-    return info
+        return {}
+    info_dicts = kwargs.get('info_dicts', False)
+    in_place = kwargs.get('in_place', True)
+    if len(infos) == 1:
+        if info_dicts:
+            return info2dicts(infos[0], in_place=in_place)
+        return infos[0]
+    info_dict = info2dicts(infos[0], in_place=in_place)
+    for info_next in infos[1:]:
+        info_next_dict = info2dicts(info_next, in_place=in_place)
+        info_dict = _merge(info_dict, info_next_dict)
+    if info_dicts:
+        # return info with dicts
+        return info_dict
+    # convert info back to lists format
+    return info2lists(info_dict, in_place=in_place)
