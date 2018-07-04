@@ -50,14 +50,15 @@ class DistroInfo(object):
             # support both a single file and a list
             self.info_files = [self.info_files]
 
-    def get_info(self, apply_tag=None):
+    def get_info(self, apply_tag=None, info_dicts=False):
         """
         Get data from distroinfo instance.
 
         :param apply_tag: apply supplied tag to info
+        :param info_dicts: return packages and releases as dicts
         :return: parsed info metadata
         """
         raw_infos = self.fetcher.fetch(*self.info_files)
-        raw_info = parse.merge_infos(*raw_infos)
+        raw_info = parse.merge_infos(*raw_infos, info_dicts=info_dicts)
         info = parse.parse_info(raw_info, apply_tag=apply_tag)
         return info
