@@ -16,6 +16,24 @@
       "revId": "200e078d09ebc08fa50442e6b3ae6d62d9bb6bab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fcc9d5aa_e0c045c1",
+        "filename": "distroinfo/fetch.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-08-03T13:06:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2235ed7a_70810d87",
+      "revId": "200e078d09ebc08fa50442e6b3ae6d62d9bb6bab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
