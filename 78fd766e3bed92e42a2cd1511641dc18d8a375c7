@@ -22,6 +22,23 @@
       "revId": "78fd766e3bed92e42a2cd1511641dc18d8a375c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "de08182a_59555f1e",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-08-08T15:15:41Z",
+      "side": 1,
+      "message": "Maybe we could add https://github.com/softwarefactory-project/DLRN/blob/master/dlrn/drivers/rdoinfo.py as another example. That illustrates tag usage, and also how to use remote_git_info and local_info.",
+      "revId": "78fd766e3bed92e42a2cd1511641dc18d8a375c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
