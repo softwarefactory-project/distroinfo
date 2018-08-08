@@ -97,12 +97,66 @@ For your convenience, `distroinfo` is available from the Cheese Shop:
 
 ## Usage
 
+You can **fetch info files from an URL** by specifying `remote_info` base URL:
+
+    from distroinfo.info import DistroInfo
+
+    RDOINFO_RAW_URL = \
+        'https://raw.githubusercontent.com/redhat-openstack/rdoinfo/master/'
+
+    di = DistroInfo('rdo-full.yml',
+                    remote_info=RDOINFO_RAW_URL)
+    info = di.get_info()
+
+Or you can **fetch info files from a remote git repository** using
+`remote_git_info`:
+
+    from distroinfo.info import DistroInfo
+
+    RDOINFO_GIT_URL = \
+        'https://github.com/redhat-openstack/rdoinfo'
+
+    di = DistroInfo('rdo-full.yml',
+                    remote_git_info=RDOINFO_GIT_URL)
+    info = di.get_info()
+
+Or you can **fetch info files from a local directory** using
+`local_info`:
+
+    from distroinfo.info import DistroInfo
+
+    INFO_PATH = '/path/to/info'
+
+    di = DistroInfo('rdo-full.yml',
+                    local_info=INFO_PATH)
+    info = di.get_info()
+
+For remote fetchers info files/repos are cached in `~/.distroinfo/cache`.
+
+You can navigate info structure yourself or use `query` module:
+
+    from distroinfo import query
+
+    # get a package info by strict package name
+    nova = query.get_package(info, 'openstack-nova')
+
+    # find a package by human reference (smart search)
+    keystone = query.find_package(info, 'keystone')
+
+Alternatively, you can get info with `packages` and `releases` as dictionaries
+indexed by project/release name for easier access using `info_dicts=True`:
+
+    info = di.get_info(info_dicts=True)
+    nova = info['packages']['nova']
+
 Until proper documentation is in place, please refer to:
 
 * [rdoinfo](https://github.com/redhat-openstack/rdoinfo) for prime example of
   `distroinfo` format usage
 * [rdoinfo integration tests](https://github.com/softwarefactory-project/distroinfo/blob/master/tests/integration/test_rdoinfo_online.py)
   for code examples
+* [dlrn.drivers.rdoinfo](https://github.com/softwarefactory-project/DLRN/blob/master/dlrn/drivers/rdoinfo.py)
+  for a real world code that uses tags and `remote_git_info`/`local_info`
 * [distroinfo.info](https://github.com/softwarefactory-project/distroinfo/blob/master/distroinfo/info.py)
   to RTFS
 
