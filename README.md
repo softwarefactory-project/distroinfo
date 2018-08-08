@@ -97,6 +97,34 @@ For your convenience, `distroinfo` is available from the Cheese Shop:
 
 ## Usage
 
+    from distroinfo.info import DistroInfo
+
+    RDOINFO_RAW_URL = \
+        'https://raw.githubusercontent.com/redhat-openstack/rdoinfo/master/'
+
+    di = DistroInfo('rdo-full.yml',
+                    remote_info=RDOINFO_RAW_URL)
+    info = di.get_info()
+
+You can also use `remote_git_info=GIT_URL` or `local_info=PATH` with
+DistroInfo constructor.
+
+You can navigate info structure yourself or use `query` module:
+
+    from distroinfo import query
+
+    # get a package info by strict package name
+    nova = query.get_package(info, 'openstack-nova')
+
+    # find a package by human reference (smart search)
+    keystone = query.find_package(info, 'keystone')
+
+Alternatively, you can get info with `packages` and `releases` as dictionaries
+indexed by project/release name for easier access using `info_dicts=True`:
+
+    info = di.get_info(info_dicts=True)
+    nova = info['packages']['nova']
+
 Until proper documentation is in place, please refer to:
 
 * [rdoinfo](https://github.com/redhat-openstack/rdoinfo) for prime example of
