@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "77368632_0219e37d",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 442
+      },
+      "writtenOn": "2018-08-08T15:11:36Z",
+      "side": 1,
+      "message": "You may want to add an example usage in these cases to ensure a user has the correct uri format. For git can I just use http://www.github.com/\u003cuser\u003e/\u003crepo\u003e or do I need to get to a raw file version?",
+      "range": {
+        "startLine": 109,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 23
+      },
+      "revId": "78fd766e3bed92e42a2cd1511641dc18d8a375c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
