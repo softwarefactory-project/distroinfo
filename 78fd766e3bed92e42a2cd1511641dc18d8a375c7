@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c4c07778_7cc95bb6",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-08-14T14:00:11Z",
+      "side": 1,
+      "message": "Right, I expanded this to provide example for each *_info parameter.",
+      "parentUuid": "77368632_0219e37d",
+      "range": {
+        "startLine": 109,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 23
+      },
+      "revId": "78fd766e3bed92e42a2cd1511641dc18d8a375c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "de08182a_59555f1e",
         "filename": "README.md",
         "patchSetId": 1
@@ -36,6 +60,24 @@
       "writtenOn": "2018-08-08T15:15:41Z",
       "side": 1,
       "message": "Maybe we could add https://github.com/softwarefactory-project/DLRN/blob/master/dlrn/drivers/rdoinfo.py as another example. That illustrates tag usage, and also how to use remote_git_info and local_info.",
+      "revId": "78fd766e3bed92e42a2cd1511641dc18d8a375c7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2256ac3b_86a43f4e",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-08-14T14:00:11Z",
+      "side": 1,
+      "message": "Good idea! -\u003e added",
+      "parentUuid": "de08182a_59555f1e",
       "revId": "78fd766e3bed92e42a2cd1511641dc18d8a375c7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
