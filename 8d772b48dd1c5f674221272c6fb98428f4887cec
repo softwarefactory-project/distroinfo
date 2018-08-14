@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ee3cc8b_42b2790a",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-08-14T14:02:47Z",
+      "side": 1,
+      "message": "/me must refrain from nitpicking :).",
+      "range": {
+        "startLine": 123,
+        "startChar": 60,
+        "endLine": 123,
+        "endChar": 61
+      },
+      "revId": "8d772b48dd1c5f674221272c6fb98428f4887cec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
