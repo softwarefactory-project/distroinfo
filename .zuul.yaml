@@ -44,19 +44,31 @@
     description: distroinfo code style checks
     run: playbooks/codestyle.yaml
 
+- job:
+    name: distroinfo-dlrn-master
+    parent: dlrn-base
+    description: distroinfo integration tests with DLRN master
+    run: playbooks/dlrn-master.yaml
+    required-projects:
+      - DLRN
+
+
 - project:
+    name: distroinfo
     check:
       jobs:
         - distroinfo-py2-centos-7
         - distroinfo-py3-fedora-27
         - distroinfo-integration
         - distroinfo-codestyle
+        - distroinfo-dlrn-master
     gate:
       jobs:
         - distroinfo-py2-centos-7
         - distroinfo-py3-fedora-27
         - distroinfo-integration
         - distroinfo-codestyle
+        - distroinfo-dlrn-master
     release:
       jobs:
         - upload-pypi
