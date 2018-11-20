@@ -22,6 +22,30 @@
       "revId": "4823899873e2ab83d02ef14e22a0718e7cb17d28",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "12eb41c1_3c4e43c2",
+        "filename": "distroinfo/query.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2018-11-20T15:27:49Z",
+      "side": 1,
+      "message": "I like the partial() solution but I\u0027d rename _filter to _match_pkg and keep rexen as required argument like this:\n\n    def _match_pkg(pkg, rexen):\n    ...\n    filter_wrapper \u003d partial(_match_pkg, rexen)\n\npartial can send args as well as kwargs.\n\nEventual logic for handling empty rexen can be handled in filter_pkgs.",
+      "parentUuid": "0862a8d0_6910e400",
+      "range": {
+        "startLine": 58,
+        "startChar": 17,
+        "endLine": 58,
+        "endChar": 27
+      },
+      "revId": "4823899873e2ab83d02ef14e22a0718e7cb17d28",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
