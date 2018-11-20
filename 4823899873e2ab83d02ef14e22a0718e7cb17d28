@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0862a8d0_6910e400",
+        "filename": "distroinfo/query.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-11-20T14:24:36Z",
+      "side": 1,
+      "message": "Maybe there\u0027s a better method, and a default of None is probably not the best idea (could {} be a better default?). I\u0027m 100% open to alternatives.",
+      "range": {
+        "startLine": 58,
+        "startChar": 17,
+        "endLine": 58,
+        "endChar": 27
+      },
+      "revId": "4823899873e2ab83d02ef14e22a0718e7cb17d28",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
