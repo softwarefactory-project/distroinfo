@@ -1,5 +1,6 @@
 from __future__ import print_function
 import collections
+from functools import partial
 import re
 import six
 
@@ -50,30 +51,32 @@ def find_package(info, package, strict=False):
 
 
 def filter_pkgs(pkgs, rexen):
-    def _filter(pkg):
-        for attr, rex in rexen.items():
-            val = pkg.get(attr)
-            if val is None:
-                return False
-            if isinstance(val, six.string_types):
-                if not re.search(rex, val):
-                    return False
-            elif isinstance(val, collections.Iterable):
-                # collection matches if any item of collection matches
-                found = False
-                for e in val:
-                    if re.search(rex, e):
-                        found = True
-                        break
-                if not found:
-                    return False
-            else:
-                raise exception.InvalidPackageFilter(
-                    why=("Can only filter strings but '%s' is %s"
-                         % (attr, type(rex).__name__)))
-        return True
+    filter_wrapper = partial(_filter, rexen=rexen)
+    return filter(filter_wrapper, pkgs)
 
-    return filter(_filter, pkgs)
+
+def _filter(pkg, rexen=None):
+    for attr, rex in rexen.items():
+        val = pkg.get(attr)
+        if val is None:
+            return False
+        if isinstance(val, six.string_types):
+            if not re.search(rex, val):
+                return False
+        elif isinstance(val, collections.Iterable):
+            # collection matches if any item of collection matches
+            found = False
+            for e in val:
+                if re.search(rex, e):
+                    found = True
+                    break
+            if not found:
+                return False
+        else:
+            raise exception.InvalidPackageFilter(
+                why=("Can only filter strings but '%s' is %s"
+                     % (attr, type(rex).__name__)))
+    return True
 
 
 def get_distrepos(info, release, dist=None):
