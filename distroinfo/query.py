@@ -1,6 +1,7 @@
 from __future__ import print_function
 import collections
 import re
+import six
 
 from distroinfo import exception
 
@@ -54,7 +55,7 @@ def filter_pkgs(pkgs, rexen):
             val = pkg.get(attr)
             if val is None:
                 return False
-            if isinstance(val, basestring):
+            if isinstance(val, six.string_types):
                 if not re.search(rex, val):
                     return False
             elif isinstance(val, collections.Iterable):
