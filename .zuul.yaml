@@ -38,11 +38,18 @@
       tox_envlist: py3-unit
 
 - job:
-    name: distroinfo-integration
+    name: distroinfo-py2-integration
     parent: distroinfo-base-py2
     description: distroinfo integration tests with rdoinfo
     vars:
-      tox_envlist: integration
+      tox_envlist: py2-integration
+
+- job:
+    name: distroinfo-py3-integration
+    parent: distroinfo-base-py3
+    description: distroinfo integration tests with rdoinfo
+    vars:
+      tox_envlist: py3-integration
 
 - job:
     name: distroinfo-codestyle
@@ -65,14 +72,16 @@
       jobs:
         - distroinfo-py2-centos-7
         - distroinfo-py3-fedora-27
-        - distroinfo-integration
+        - distroinfo-py2-integration
+        - distroinfo-py3-integration
         - distroinfo-codestyle
         - distroinfo-dlrn-master
     gate:
       jobs:
         - distroinfo-py2-centos-7
         - distroinfo-py3-fedora-27
-        - distroinfo-integration
+        - distroinfo-py2-integration
+        - distroinfo-py3-integration
         - distroinfo-codestyle
         - distroinfo-dlrn-master
     release:
