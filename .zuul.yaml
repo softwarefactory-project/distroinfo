@@ -9,29 +9,23 @@
     name: distroinfo-base-py2
     parent: distroinfo-base
     abstract: true
-    nodeset:
-      nodes:
-        - name: test-node
-          label: centos-oci
+    nodeset: centos-latest-runc
 
 - job:
     name: distroinfo-base-py3
     parent: distroinfo-base
     abstract: true
-    nodeset:
-      nodes:
-        - name: test-node
-          label: f27-oci
+    nodeset: fedora-latest-runc
 
 - job:
-    name: distroinfo-py2-centos-7
+    name: distroinfo-py2-centos
     parent: distroinfo-base-py2
     description: distroinfo tests on python2
     vars:
       tox_envlist: py2-unit
 
 - job:
-    name: distroinfo-py3-fedora-27
+    name: distroinfo-py3-fedora
     parent: distroinfo-base-py3
     description: distroinfo tests on python3
     vars:
@@ -70,16 +64,16 @@
     name: distroinfo
     check:
       jobs:
-        - distroinfo-py2-centos-7
-        - distroinfo-py3-fedora-27
+        - distroinfo-py2-centos
+        - distroinfo-py3-fedora
         - distroinfo-py2-integration
         - distroinfo-py3-integration
         - distroinfo-codestyle
         - distroinfo-dlrn-master
     gate:
       jobs:
-        - distroinfo-py2-centos-7
-        - distroinfo-py3-fedora-27
+        - distroinfo-py2-centos
+        - distroinfo-py3-fedora
         - distroinfo-py2-integration
         - distroinfo-py3-integration
         - distroinfo-codestyle
