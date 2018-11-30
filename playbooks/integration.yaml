@@ -1,8 +1,0 @@
----
-- hosts: all
-  tasks:
-    - name: Run integration tests with rdoinfo
-      shell:
-        cmd: |
-          tox -e integration
-        chdir: "{{ zuul.project.src_dir }}"

@@ -1,12 +1,14 @@
 ---
 - job:
     name: distroinfo-base
-    parent: base
+    parent: tox
+    abstract: true
     pre-run: playbooks/base.yaml
 
 - job:
     name: distroinfo-base-py2
     parent: distroinfo-base
+    abstract: true
     nodeset:
       nodes:
         - name: test-node
@@ -15,6 +17,7 @@
 - job:
     name: distroinfo-base-py3
     parent: distroinfo-base
+    abstract: true
     nodeset:
       nodes:
         - name: test-node
@@ -24,25 +27,29 @@
     name: distroinfo-py2-centos-7
     parent: distroinfo-base-py2
     description: distroinfo tests on python2
-    run: playbooks/py2-tests.yaml
+    vars:
+      tox_envlist: py2-unit
 
 - job:
     name: distroinfo-py3-fedora-27
     parent: distroinfo-base-py3
     description: distroinfo tests on python3
-    run: playbooks/py3-tests.yaml
+    vars:
+      tox_envlist: py3-unit
 
 - job:
     name: distroinfo-integration
     parent: distroinfo-base-py2
     description: distroinfo integration tests with rdoinfo
-    run: playbooks/integration.yaml
+    vars:
+      tox_envlist: integration
 
 - job:
     name: distroinfo-codestyle
     parent: distroinfo-base-py2
     description: distroinfo code style checks
-    run: playbooks/codestyle.yaml
+    vars:
+      tox_envlist: pycodestyle
 
 - job:
     name: distroinfo-dlrn-master
