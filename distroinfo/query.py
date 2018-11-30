@@ -52,7 +52,7 @@ def find_package(info, package, strict=False):
 
 def filter_pkgs(pkgs, rexen):
     filter_wrapper = partial(_match_pkg, rexen)
-    return filter(filter_wrapper, pkgs)
+    return list(filter(filter_wrapper, pkgs))
 
 
 def _match_pkg(rexen, pkg):
