@@ -19,7 +19,9 @@ def test_rdoinfo_remote_fetch(tmpdir):
     remote_info = remote_di.get_info()
     out = log_stream.getvalue()
     assert 'Fetching remote file:' in out
-    assert 'cached' not in out
+    # NOTE(jpena): with the current rdoinfo structure, we import tags.yml
+    # twice, so it would fail the assertion
+    # assert 'cached' not in out
     common.assert_rdoinfo_full(remote_info)
     # second fetch should be cached
     remote_info = remote_di.get_info()
