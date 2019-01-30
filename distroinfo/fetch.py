@@ -126,8 +126,9 @@ class RemoteInfoFetcher(CachedInfoFetcher):
         if req.ok:
             if self.cache_ttl:
                 # cache this file
-                helpers.ensure_dir(self.cache_path)
                 path = os.path.join(self.cache_path, fn)
+                base_dir = os.path.dirname(path)
+                helpers.ensure_dir(base_dir)
                 open(path, 'wt').write(req.text)
             return req.text
         else:
