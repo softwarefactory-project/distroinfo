@@ -161,6 +161,22 @@ Until proper documentation is in place, please refer to:
   to RTFS
 
 
+## Command Line Interface
+
+A simple CLI is provided in `scripts/di.py` which can be used to test basic
+`distroinfo` functionality, profile, dump parsed data, etc.
+
+An example of dumping parsed rdoinfo into both YAML and JSON files:
+
+    $> ./scripts/di.py dump -y rdoinfo.yaml -j rdoinfo.json -f git \
+           'https://github.com/redhat-openstack/rdoinfo' rdo-full.yml
+
+    Dumping YAML to: rdoinfo.yaml
+    Dumping JSON to: rdoinfo.json
+
+Additional `docopt` module is required to run the CLI.
+
+
 ## Bugs
 
 Please use the
