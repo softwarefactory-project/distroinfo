@@ -3,6 +3,10 @@ import logging
 import os
 import requests
 import yaml
+try:
+    from yaml import CLoader as Loader
+except ImportError:
+    from yaml import Loader
 
 from distroinfo import exception
 from distroinfo import helpers
@@ -41,7 +45,7 @@ class InfoFetcher(object):
 
     def get_file_data(self, fn):
         content = self.get_file_content(fn)
-        return yaml.load(content)
+        return yaml.load(content, Loader=Loader)
 
     def fetch(self, *info_files, **kwargs):
         contents = []
