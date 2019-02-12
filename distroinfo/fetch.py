@@ -13,7 +13,6 @@ from distroinfo import helpers
 from distroinfo import repoman
 
 
-logging.basicConfig(level=logging.ERROR)
 log = logging.getLogger("distroinfo")
 
 

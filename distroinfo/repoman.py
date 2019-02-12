@@ -9,7 +9,6 @@ from distroinfo import helpers
 from distroinfo.helpers import git
 
 
-logging.basicConfig(level=logging.ERROR)
 log = logging.getLogger("distroinfo")
 
 
