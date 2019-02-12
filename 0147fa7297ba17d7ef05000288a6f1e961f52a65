@@ -16,6 +16,24 @@
       "revId": "0147fa7297ba17d7ef05000288a6f1e961f52a65",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fd8fc362_7f9f4f45",
+        "filename": "distroinfo/shell.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 421
+      },
+      "writtenOn": "2019-02-12T18:35:45Z",
+      "side": 1,
+      "message": "It\u0027s a limitation of using simple straightforward concatenation of info_url + info_file, user is responsible for using correct strings.\n\nAutomatically adding \u0027/\u0027 to info_url if missing would restrict the possible URLs, for example \"$URL/foo?file\u003dlul.yaml\" could no longer be used.\n\nThis is gonna happen though, so what do you propose?",
+      "parentUuid": "667f1df8_7518be75",
+      "revId": "0147fa7297ba17d7ef05000288a6f1e961f52a65",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
