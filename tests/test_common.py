@@ -42,7 +42,7 @@ def assert_rdoinfo_base(info):
         'project': 'nova',
         'conf': 'rpmfactory-core',
         'upstream':
-            'git://git.openstack.org/openstack/nova',
+            'https://opendev.org/openstack/nova.git',
         'patches':
             'http://review.rdoproject.org/r/p/openstack/nova.git',
         'distgit':
