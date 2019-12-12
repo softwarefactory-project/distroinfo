@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "25125858_55ac1b81",
+        "filename": "tests/test_common.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2019-12-12T11:08:08Z",
+      "side": 1,
+      "message": "This comes from the rdoinfo definition, so it will fail if changed (see comment on line 36).",
+      "range": {
+        "startLine": 45,
+        "startChar": 10,
+        "endLine": 45,
+        "endChar": 53
+      },
+      "revId": "74026fba15fae727feaf49bb97f3d78702fc781c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
