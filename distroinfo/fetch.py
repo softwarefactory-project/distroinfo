@@ -17,6 +17,8 @@ import logging
 import os
 import requests
 import yaml
+from urllib3.util.retry import Retry
+from requests.adapters import HTTPAdapter
 try:
     from yaml import CLoader as Loader
 except ImportError:
@@ -136,10 +138,20 @@ class RemoteInfoFetcher(CachedInfoFetcher):
         self.cache_path = os.path.join(
             self.cache_base_path, get_id(self.source))
 
+        # http session with retry support, inspired from:
+        # https://stackoverflow.com/questions/15431044/
+        self.session = requests.Session()
+        retries = Retry(total=5,
+                        backoff_factor=5,
+                        status_forcelist=[500, 502, 503, 504])
+        self.session.mount('http://', HTTPAdapter(max_retries=retries))
+        self.session.mount('https://', HTTPAdapter(max_retries=retries))
+
     def fetch_file(self, fn):
         url = u'%s%s' % (self.source, fn)
         log.info(u'Fetching remote file: %s' % url)
-        req = requests.get(url)
+
+        req = self.session.get(url)
         if req.ok:
             if self.cache_ttl:
                 # cache this file
