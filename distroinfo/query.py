@@ -13,10 +13,14 @@
 # under the License.
 
 from __future__ import print_function
-import collections
 from functools import partial
 import re
 import six
+
+try:
+    from collections.abc import Iterable
+except ImportError:
+    from collections import Iterable
 
 from distroinfo import exception
 
@@ -77,7 +81,7 @@ def _match_pkg(rexen, pkg):
         if isinstance(val, six.string_types):
             if not re.search(rex, val):
                 return False
-        elif isinstance(val, collections.Iterable):
+        elif isinstance(val, Iterable):
             # collection matches if any item of collection matches
             found = False
             for e in val:
