@@ -143,7 +143,7 @@ def tags_diff(info1, info2, tagsname='tags'):
                     updated_tags.append(tag)
         else:
             if pkg2.get(tagsname):
-                updated_tags = pkg2.get(tagsname).keys()
+                updated_tags = list(pkg2.get(tagsname).keys())
         if updated_tags:
             diff.append((pkg2['name'], updated_tags))
     return diff
