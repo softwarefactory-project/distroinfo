@@ -19,6 +19,7 @@
         cmd: |
           timeout --signal=SIGKILL 3600 ./scripts/run_tests.sh http://review.rdoproject.org/r/p/rdoinfo.git
         chdir: "{{ working_dir }}/DLRN"
+
     - name: Copy DLRN logs for collection
       shell:
         cmd: |
