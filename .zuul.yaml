@@ -15,7 +15,7 @@
     name: distroinfo-base-py3
     parent: distroinfo-base
     abstract: true
-    nodeset: fedora-latest-runc
+    nodeset: fedora-latest-pod
 
 - job:
     name: distroinfo-py2-centos
