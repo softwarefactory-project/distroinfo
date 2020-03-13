@@ -9,7 +9,7 @@
     name: distroinfo-base-py2
     parent: distroinfo-base
     abstract: true
-    nodeset: centos-latest-runc
+    nodeset: centos-latest-pod
 
 - job:
     name: distroinfo-base-py3
