@@ -35,9 +35,6 @@ Use github
 `Issues <https://github.com/softwarefactory-project/distroinfo/issues>`__
 to make requests and report bugs.
 
-Poke ``jruzicka`` on ``#softwarefactory`` or ``#rdo`` Freenode IRC for
-more information.
-
 Installation
 ------------
 
