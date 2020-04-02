@@ -1,0 +1,8 @@
+Code-Review+2: Javier Peña <jpena@redhat.com>
+Workflow+1: Javier Peña <jpena@redhat.com>
+Verified+2: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-by: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-at: Thu, 02 Apr 2020 16:16:09 +0000
+Reviewed-on: https://softwarefactory-project.io/r/18002
+Project: distroinfo
+Branch: refs/heads/master
