@@ -16,6 +16,11 @@ import collections
 import copy
 import six
 
+try:
+    from collections.abc import Iterable
+except ImportError:
+    from collections import Iterable
+
 from distroinfo import exception
 
 
@@ -48,7 +53,7 @@ def parse_releases(info):
         releases = info['releases']
     except KeyError:
         raise exception.MissingRequiredSection(section='releases')
-    if not isinstance(releases, collections.Iterable):
+    if not isinstance(releases, Iterable):
         raise exception.InvalidInfoFormat(
             msg="'releases' section must be iterable")
     if isinstance(releases, dict):
@@ -148,7 +153,7 @@ def parse_packages(info, apply_tag=None):
         pkgs = info['packages']
     except KeyError:
         raise exception.MissingRequiredSection(section='packages')
-    if not isinstance(pkgs, collections.Iterable):
+    if not isinstance(pkgs, Iterable):
         raise exception.InvalidInfoFormat(
             msg="'packages' section must be iterable")
     if isinstance(pkgs, dict):
