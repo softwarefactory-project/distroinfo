@@ -194,9 +194,9 @@ def _merge(a, b):
     return b
 
 
-def list2dict(l, key):
+def list2dict(_list, key):
     d = collections.OrderedDict()
-    for i in l:
+    for i in _list:
         kv = i.get(key)
         if kv in d:
             d[kv] = _merge(d[kv], i)

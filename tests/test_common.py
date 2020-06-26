@@ -69,15 +69,15 @@ def assert_rdoinfo_deps(info):
     """
     pkg = query.get_package(info, 'python-sphinx')
     assert pkg
-    nova = {
+    sphinx = {
         'name': 'python-sphinx',
         'project': 'python-sphinx',
         'conf': 'rdo-dependency',
         'upstream': 'https://github.com/sphinx-doc/sphinx',
         'patches': None,
-        'distgit': 'https://github.com/rdo-common/python-sphinx.git',
+        'distgit': 'https://github.com/rdo-common/python-sphinx',
     }
-    assert_dict_contains(pkg, expected=nova)
+    assert_dict_contains(pkg, expected=sphinx)
     assert 'tags' in pkg
     assert 'dependency' in pkg['tags']
     assert 'buildsys-tags' in pkg
