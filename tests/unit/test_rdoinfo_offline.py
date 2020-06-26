@@ -19,7 +19,7 @@ def test_rdoinfo_full():
 
 
 def test_rdoinfo_merge():
-    di = DistroInfo(['rdo.yml', 'deps.yml'],
+    di = DistroInfo(['rdo.yml', 'deps.yml', 'buildsys-tags.yml'],
                     local_info=common.get_test_info_path('rdoinfo'))
     info = di.get_info()
     common.assert_rdoinfo_full(info)

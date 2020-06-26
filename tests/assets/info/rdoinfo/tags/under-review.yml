@@ -1,0 +1,28 @@
+packages:
+- project: ansible-role-tripleo-keystone
+  tags:
+    under-review:
+- project: collectd-ceilometer-plugin
+  tags:
+    under-review:
+- project: karbor
+  tags:
+    under-review:
+- project: karbor-dashboard
+  tags:
+    under-review:
+- project: karborclient
+  tags:
+    under-review:
+- project: os-log-merger
+  tags:
+    under-review:
+- project: puppet-barometer
+  tags:
+    under-review:
+- project: puppet-logstash
+  tags:
+    under-review:
+- project: whitebox-tempest-plugin
+  tags:
+    under-review:

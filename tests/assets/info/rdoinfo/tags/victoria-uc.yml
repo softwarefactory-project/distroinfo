@@ -1,0 +1,1164 @@
+packages:
+- project: ansible-config_template
+  tags:
+    victoria-uc:
+- project: ansible-pacemaker
+  tags:
+    victoria-uc:
+- project: ansible-role-atos-hsm
+  tags:
+    victoria-uc:
+- project: ansible-role-chrony
+  tags:
+    victoria-uc:
+- project: ansible-role-container-registry
+  tags:
+    victoria-uc:
+- project: ansible-role-lunasa-hsm
+  tags:
+    victoria-uc:
+- project: ansible-role-openstack-operations
+  tags:
+    victoria-uc:
+- project: ansible-role-redhat-subscription
+  tags:
+    victoria-uc:
+- project: ansible-role-thales-hsm
+  tags:
+    victoria-uc:
+- project: ansible-role-tripleo-modify-image
+  tags:
+    victoria-uc:
+- project: aodh
+  tags:
+    victoria-uc:
+- project: aodhclient
+  tags:
+    victoria-uc:
+      source-branch: 2.0.1
+- project: automaton
+  tags:
+    victoria-uc:
+      source-branch: 2.1.0
+- project: barbican
+  tags:
+    victoria-uc:
+- project: barbican-tempest-plugin
+  tags:
+    victoria-uc:
+- project: barbicanclient
+  tags:
+    victoria-uc:
+      source-branch: 4.10.0
+- project: castellan
+  tags:
+    victoria-uc:
+      source-branch: 3.1.0
+- project: ceilometer
+  tags:
+    victoria-uc:
+- project: ceilometerclient
+  tags:
+    victoria-uc:
+      source-branch: 2.9.0
+- project: ceilometermiddleware
+  tags:
+    victoria-uc:
+      source-branch: 2.0.0
+- project: cinder
+  tags:
+    victoria-uc:
+- project: cinder-tempest-plugin
+  tags:
+    victoria-uc:
+- project: cinderclient
+  tags:
+    victoria-uc:
+      source-branch: 7.0.0
+- project: cinderlib
+  tags:
+    victoria-uc:
+- project: cliff
+  tags:
+    victoria-uc:
+      source-branch: 3.3.0
+- project: cloudkitty
+  tags:
+    victoria-uc:
+- project: cloudkitty-dashboard
+  tags:
+    victoria-uc:
+- project: cloudkittyclient
+  tags:
+    victoria-uc:
+      source-branch: 4.0.0
+- project: collectd-gnocchi
+  tags:
+    victoria-uc:
+- project: cursive
+  tags:
+    victoria-uc:
+      source-branch: 0.2.2
+- project: debtcollector
+  tags:
+    victoria-uc:
+      source-branch: 2.1.0
+- project: designate
+  tags:
+    victoria-uc:
+- project: designate-dashboard
+  tags:
+    victoria-uc:
+- project: designate-tempest-plugin
+  tags:
+    victoria-uc:
+- project: designateclient
+  tags:
+    victoria-uc:
+      source-branch: 4.0.0
+- project: dib-utils
+  tags:
+    victoria-uc:
+      source-branch: 0.0.11
+- project: diskimage-builder
+  tags:
+    victoria-uc:
+- project: dracclient
+  tags:
+    victoria-uc:
+- project: ec2-api
+  tags:
+    victoria-uc:
+- project: ec2api-tempest-plugin
+  tags:
+    victoria-uc:
+- project: futurist
+  tags:
+    victoria-uc:
+      source-branch: 2.2.0
+- project: glance
+  tags:
+    victoria-uc:
+- project: glance_store
+  tags:
+    victoria-uc:
+- project: glanceclient
+  tags:
+    victoria-uc:
+      source-branch: 3.1.1
+- project: glare
+  tags:
+    victoria-uc:
+- project: glareclient
+  tags:
+    victoria-uc:
+      source-branch: 0.5.3
+- project: gnocchi
+  tags:
+    victoria-uc:
+      source-branch: stable/4.3
+- project: gnocchiclient
+  tags:
+    victoria-uc:
+      source-branch: 7.0.4
+- project: hacking
+  tags:
+    victoria-uc:
+      source-branch: 865398f0c9a20883ef1ab68a9f80ffd74b9098e8
+- project: hardware
+  tags:
+    victoria-uc:
+- project: heat
+  tags:
+    victoria-uc:
+- project: heat-agents
+  tags:
+    victoria-uc:
+- project: heat-dashboard
+  tags:
+    victoria-uc:
+- project: heat-tempest-plugin
+  tags:
+    victoria-uc:
+- project: heat-translator
+  tags:
+    victoria-uc:
+      source-branch: 2.0.0
+- project: heatclient
+  tags:
+    victoria-uc:
+      source-branch: 2.1.0
+- project: horizon
+  tags:
+    victoria-uc:
+- project: ibmcclient
+  tags:
+    victoria-uc:
+- project: ironic
+  tags:
+    victoria-uc:
+- project: ironic-inspector
+  tags:
+    victoria-uc:
+- project: ironic-inspector-client
+  tags:
+    victoria-uc:
+      source-branch: 4.1.0
+- project: ironic-lib
+  tags:
+    victoria-uc:
+      source-branch: 4.3.0
+- project: ironic-prometheus-exporter
+  tags:
+    victoria-uc:
+- project: ironic-python-agent
+  tags:
+    victoria-uc:
+- project: ironic-python-agent-builder
+  tags:
+    victoria-uc:
+- project: ironic-staging-drivers
+  tags:
+    victoria-uc:
+- project: ironic-tempest-plugin
+  tags:
+    victoria-uc:
+- project: ironic-ui
+  tags:
+    victoria-uc:
+- project: ironicclient
+  tags:
+    victoria-uc:
+      source-branch: 4.1.0
+- project: keystone
+  tags:
+    victoria-uc:
+- project: keystone-tempest-plugin
+  tags:
+    victoria-uc:
+- project: keystoneauth1
+  tags:
+    victoria-uc:
+      source-branch: 4.0.0
+- project: keystoneclient
+  tags:
+    victoria-uc:
+      source-branch: 4.0.0
+- project: keystonemiddleware
+  tags:
+    victoria-uc:
+      source-branch: 9.0.0
+- project: kolla
+  tags:
+    victoria-uc:
+- project: kuryr
+  tags:
+    victoria-uc:
+- project: kuryr-kubernetes
+  tags:
+    victoria-uc:
+- project: kuryr-tempest-plugin
+  tags:
+    victoria-uc:
+- project: magnum
+  tags:
+    victoria-uc:
+- project: magnum-tempest-plugin
+  tags:
+    victoria-uc:
+- project: magnum-ui
+  tags:
+    victoria-uc:
+- project: magnumclient
+  tags:
+    victoria-uc:
+      source-branch: 3.1.0
+- project: manila
+  tags:
+    victoria-uc:
+- project: manila-tempest-plugin
+  tags:
+    victoria-uc:
+- project: manila-ui
+  tags:
+    victoria-uc:
+- project: manilaclient
+  tags:
+    victoria-uc:
+      source-branch: 2.1.0
+- project: metalsmith
+  tags:
+    victoria-uc:
+      source-branch: 1.0.0
+- project: microversion-parse
+  tags:
+    victoria-uc:
+      source-branch: 1.0.1
+- project: mistral
+  tags:
+    victoria-uc:
+- project: mistral-dashboard
+  tags:
+    victoria-uc:
+- project: mistral-extra
+  tags:
+    victoria-uc:
+- project: mistral-lib
+  tags:
+    victoria-uc:
+      source-branch: 2.1.0
+- project: mistral-tempest-plugin
+  tags:
+    victoria-uc:
+- project: mistralclient
+  tags:
+    victoria-uc:
+      source-branch: 4.0.1
+- project: monascaclient
+  tags:
+    victoria-uc:
+      source-branch: 2.1.0
+- project: mox3
+  tags:
+    victoria-uc:
+      source-branch: 1.1.0
+- project: murano
+  tags:
+    victoria-uc:
+- project: murano-agent
+  tags:
+    victoria-uc:
+- project: murano-dashboard
+  tags:
+    victoria-uc:
+- project: murano-tempest-plugin
+  tags:
+    victoria-uc:
+- project: muranoclient
+  tags:
+    victoria-uc:
+      source-branch: 2.1.0
+- project: networking-ansible
+  tags:
+    victoria-uc:
+- project: networking-arista
+  tags:
+    victoria-uc:
+- project: networking-bagpipe
+  tags:
+    victoria-uc:
+- project: networking-baremetal
+  tags:
+    victoria-uc:
+- project: networking-bgpvpn
+  tags:
+    victoria-uc:
+- project: networking-bigswitch
+  tags:
+    victoria-uc:
+- project: networking-generic-switch
+  tags:
+    victoria-uc:
+- project: networking-l2gw
+  tags:
+    victoria-uc:
+- project: networking-l2gw-tempest-plugin
+  tags:
+    victoria-uc:
+- project: networking-mlnx
+  tags:
+    victoria-uc:
+- project: networking-odl
+  tags:
+    victoria-uc:
+- project: networking-omnipath
+  tags:
+    victoria-uc:
+- project: networking-sfc
+  tags:
+    victoria-uc:
+- project: neutron
+  tags:
+    victoria-uc:
+- project: neutron-dynamic-routing
+  tags:
+    victoria-uc:
+- project: neutron-fwaas
+  tags:
+    victoria-uc:
+      source-branch: 94c0d54ded5006174ca9623a21ff8b3e995caa03
+- project: neutron-lib
+  tags:
+    victoria-uc:
+      source-branch: 2.4.0
+- project: neutron-tempest-plugin
+  tags:
+    victoria-uc:
+- project: neutron-vpnaas
+  tags:
+    victoria-uc:
+- project: neutronclient
+  tags:
+    victoria-uc:
+      source-branch: 7.1.1
+- project: nova
+  tags:
+    victoria-uc:
+- project: novaclient
+  tags:
+    victoria-uc:
+      source-branch: 17.0.0
+- project: novajoin
+  tags:
+    victoria-uc:
+- project: novajoin-tempest-plugin
+  tags:
+    victoria-uc:
+      source-branch: cb81f5311ec90174c1cd9b9736a8c503f34824bc
+- project: octavia
+  tags:
+    victoria-uc:
+- project: octavia-dashboard
+  tags:
+    victoria-uc:
+- project: octavia-lib
+  tags:
+    victoria-uc:
+      source-branch: 2.0.0
+- project: octavia-tempest-plugin
+  tags:
+    victoria-uc:
+- project: octaviaclient
+  tags:
+    victoria-uc:
+      source-branch: 2.0.1
+- project: openstack-macros
+  tags:
+    victoria-uc:
+- project: openstack-selinux
+  tags:
+    victoria-uc:
+- project: openstackclient
+  tags:
+    victoria-uc:
+      source-branch: 5.2.0
+- project: openstacksdk
+  tags:
+    victoria-uc:
+      source-branch: 0.46.0
+- project: os-apply-config
+  tags:
+    victoria-uc:
+- project: os-brick
+  tags:
+    victoria-uc:
+      source-branch: 3.1.0
+- project: os-client-config
+  tags:
+    victoria-uc:
+      source-branch: 2.1.0
+- project: os-collect-config
+  tags:
+    victoria-uc:
+- project: os-faults
+  tags:
+    victoria-uc:
+- project: os-ken
+  tags:
+    victoria-uc:
+      source-branch: 1.1.0
+- project: os-net-config
+  tags:
+    victoria-uc:
+- project: os-refresh-config
+  tags:
+    victoria-uc:
+- project: os-resource-classes
+  tags:
+    victoria-uc:
+      source-branch: 1.0.0
+- project: os-service-types
+  tags:
+    victoria-uc:
+      source-branch: 1.7.0
+- project: os-testr
+  tags:
+    victoria-uc:
+      source-branch: 2.0.0
+- project: os-traits
+  tags:
+    victoria-uc:
+      source-branch: 2.3.0
+- project: os-vif
+  tags:
+    victoria-uc:
+      source-branch: 2.0.0
+- project: os-win
+  tags:
+    victoria-uc:
+      source-branch: 5.0.2
+- project: os-xenapi
+  tags:
+    victoria-uc:
+      source-branch: 0.3.4
+- project: osc-lib
+  tags:
+    victoria-uc:
+      source-branch: 2.2.0
+- project: osc-placement
+  tags:
+    victoria-uc:
+      source-branch: 2.0.0
+- project: oslo-cache
+  tags:
+    victoria-uc:
+      source-branch: 2.4.1
+- project: oslo-concurrency
+  tags:
+    victoria-uc:
+      source-branch: 4.1.1
+- project: oslo-config
+  tags:
+    victoria-uc:
+      source-branch: 8.1.0
+- project: oslo-context
+  tags:
+    victoria-uc:
+      source-branch: 3.1.0
+- project: oslo-db
+  tags:
+    victoria-uc:
+      source-branch: 8.2.0
+- project: oslo-i18n
+  tags:
+    victoria-uc:
+      source-branch: 5.0.0
+- project: oslo-log
+  tags:
+    victoria-uc:
+      source-branch: 4.2.1
+- project: oslo-messaging
+  tags:
+    victoria-uc:
+      source-branch: 12.2.0
+- project: oslo-middleware
+  tags:
+    victoria-uc:
+      source-branch: 4.1.0
+- project: oslo-policy
+  tags:
+    victoria-uc:
+      source-branch: 3.2.0
+- project: oslo-privsep
+  tags:
+    victoria-uc:
+      source-branch: 2.2.0
+- project: oslo-reports
+  tags:
+    victoria-uc:
+      source-branch: 2.1.0
+- project: oslo-rootwrap
+  tags:
+    victoria-uc:
+      source-branch: 6.1.0
+- project: oslo-serialization
+  tags:
+    victoria-uc:
+      source-branch: 4.0.0
+- project: oslo-service
+  tags:
+    victoria-uc:
+      source-branch: 2.2.0
+- project: oslo-sphinx
+  tags:
+    victoria-uc:
+      source-branch: f92583cfc34292ec1441368f984c9692346946c4
+- project: oslo-upgradecheck
+  tags:
+    victoria-uc:
+      source-branch: 1.1.0
+- project: oslo-utils
+  tags:
+    victoria-uc:
+      source-branch: 4.2.1
+- project: oslo-versionedobjects
+  tags:
+    victoria-uc:
+      source-branch: 2.1.0
+- project: oslo-vmware
+  tags:
+    victoria-uc:
+      source-branch: 3.4.0
+- project: oslotest
+  tags:
+    victoria-uc:
+      source-branch: 4.3.0
+- project: osops-tools-monitoring-oschecks
+  tags:
+    victoria-uc:
+- project: osprofiler
+  tags:
+    victoria-uc:
+      source-branch: 3.2.0
+- project: oswin-tempest-plugin
+  tags:
+    victoria-uc:
+- project: ovn-octavia-provider
+  tags:
+    victoria-uc:
+- project: ovsdbapp
+  tags:
+    victoria-uc:
+      source-branch: 1.3.0
+- project: packstack
+  tags:
+    victoria-uc:
+- project: panko
+  tags:
+    victoria-uc:
+- project: pankoclient
+  tags:
+    victoria-uc:
+      source-branch: 0.5.0
+- project: patrole
+  tags:
+    victoria-uc:
+- project: paunch
+  tags:
+    victoria-uc:
+      source-branch: 324d5f67dfe6487ae98f5d07fdc5b8fec9332724
+- project: placement
+  tags:
+    victoria-uc:
+- project: proliantutils
+  tags:
+    victoria-uc:
+      source-branch: 2.9.4
+- project: puppet-aodh
+  tags:
+    victoria-uc:
+- project: puppet-apache
+  tags:
+    victoria-uc:
+- project: puppet-archive
+  tags:
+    victoria-uc:
+- project: puppet-auditd
+  tags:
+    victoria-uc:
+- project: puppet-barbican
+  tags:
+    victoria-uc:
+- project: puppet-cassandra
+  tags:
+    victoria-uc:
+- project: puppet-ceilometer
+  tags:
+    victoria-uc:
+- project: puppet-ceph
+  tags:
+    victoria-uc:
+- project: puppet-certmonger
+  tags:
+    victoria-uc:
+- project: puppet-cinder
+  tags:
+    victoria-uc:
+- project: puppet-collectd
+  tags:
+    victoria-uc:
+- project: puppet-concat
+  tags:
+    victoria-uc:
+- project: puppet-contrail
+  tags:
+    victoria-uc:
+- project: puppet-corosync
+  tags:
+    victoria-uc:
+- project: puppet-datacat
+  tags:
+    victoria-uc:
+- project: puppet-designate
+  tags:
+    victoria-uc:
+- project: puppet-dns
+  tags:
+    victoria-uc:
+- project: puppet-ec2api
+  tags:
+    victoria-uc:
+- project: puppet-elasticsearch
+  tags:
+    victoria-uc:
+- project: puppet-etcd
+  tags:
+    victoria-uc:
+- project: puppet-fdio
+  tags:
+    victoria-uc:
+- project: puppet-firewall
+  tags:
+    victoria-uc:
+- project: puppet-fluentd
+  tags:
+    victoria-uc:
+- project: puppet-git
+  tags:
+    victoria-uc:
+- project: puppet-glance
+  tags:
+    victoria-uc:
+- project: puppet-gnocchi
+  tags:
+    victoria-uc:
+- project: puppet-haproxy
+  tags:
+    victoria-uc:
+- project: puppet-heat
+  tags:
+    victoria-uc:
+- project: puppet-horizon
+  tags:
+    victoria-uc:
+- project: puppet-inifile
+  tags:
+    victoria-uc:
+- project: puppet-ipaclient
+  tags:
+    victoria-uc:
+- project: puppet-ironic
+  tags:
+    victoria-uc:
+- project: puppet-java
+  tags:
+    victoria-uc:
+- project: puppet-kafka
+  tags:
+    victoria-uc:
+- project: puppet-keepalived
+  tags:
+    victoria-uc:
+- project: puppet-keystone
+  tags:
+    victoria-uc:
+- project: puppet-kibana3
+  tags:
+    victoria-uc:
+- project: puppet-kmod
+  tags:
+    victoria-uc:
+- project: puppet-lib-file_concat
+  tags:
+    victoria-uc:
+- project: puppet-magnum
+  tags:
+    victoria-uc:
+- project: puppet-manila
+  tags:
+    victoria-uc:
+- project: puppet-memcached
+  tags:
+    victoria-uc:
+- project: puppet-midonet
+  tags:
+    victoria-uc:
+- project: puppet-mistral
+  tags:
+    victoria-uc:
+- project: puppet-module-data
+  tags:
+    victoria-uc:
+- project: puppet-mongodb
+  tags:
+    victoria-uc:
+- project: puppet-murano
+  tags:
+    victoria-uc:
+- project: puppet-mysql
+  tags:
+    victoria-uc:
+- project: puppet-n1k-vsm
+  tags:
+    victoria-uc:
+- project: puppet-neutron
+  tags:
+    victoria-uc:
+- project: puppet-nova
+  tags:
+    victoria-uc:
+- project: puppet-nssdb
+  tags:
+    victoria-uc:
+- project: puppet-ntp
+  tags:
+    victoria-uc:
+      source-branch: 4.2.0
+- project: puppet-octavia
+  tags:
+    victoria-uc:
+- project: puppet-openstack_extras
+  tags:
+    victoria-uc:
+- project: puppet-openstacklib
+  tags:
+    victoria-uc:
+- project: puppet-oslo
+  tags:
+    victoria-uc:
+- project: puppet-ovn
+  tags:
+    victoria-uc:
+- project: puppet-pacemaker
+  tags:
+    victoria-uc:
+- project: puppet-panko
+  tags:
+    victoria-uc:
+- project: puppet-placement
+  tags:
+    victoria-uc:
+- project: puppet-powerdns
+  tags:
+    victoria-uc:
+- project: puppet-qdr
+  tags:
+    victoria-uc:
+- project: puppet-rabbitmq
+  tags:
+    victoria-uc:
+- project: puppet-redis
+  tags:
+    victoria-uc:
+- project: puppet-remote
+  tags:
+    victoria-uc:
+- project: puppet-rsync
+  tags:
+    victoria-uc:
+- project: puppet-rsyslog
+  tags:
+    # NOTE(aschultz): rsyslog broke backwards compatibility with
+    # # https://github.com/voxpupuli/puppet-rsyslog/pull/136
+    victoria-uc:
+      source-branch: 2548a0d95c1549b506b7bb2314dd149b028fc04b
+- project: puppet-sahara
+  tags:
+    victoria-uc:
+- project: puppet-sensu
+  tags:
+    # NOTE: IMPORTANT! Please don't ever update from this commit. Sensu refactored
+    # clients to Go language, which we don't provide and will not provide in future,
+    # because Sensu is being deprecated.
+    victoria-uc:
+      source-branch: 20361a4043d2881359551510ada0817caee3bc05
+- project: puppet-snmp
+  tags:
+    victoria-uc:
+      # New versions of puppet-snmp require facter > 3.
+      source-branch: 5d73485b9d0c42f8131fc0c761406ac8f0c88152
+- project: puppet-ssh
+  tags:
+    victoria-uc:
+- project: puppet-staging
+  tags:
+    victoria-uc:
+- project: puppet-stdlib
+  tags:
+    victoria-uc:
+- project: puppet-swift
+  tags:
+    victoria-uc:
+- project: puppet-sysctl
+  tags:
+    victoria-uc:
+- project: puppet-systemd
+  tags:
+    victoria-uc:
+- project: puppet-tacker
+  tags:
+    victoria-uc:
+- project: puppet-tempest
+  tags:
+    victoria-uc:
+- project: puppet-timezone
+  tags:
+    victoria-uc:
+- project: puppet-tomcat
+  tags:
+    victoria-uc:
+- project: puppet-tripleo
+  tags:
+    victoria-uc:
+- project: puppet-trove
+  tags:
+    victoria-uc:
+- project: puppet-uchiwa
+  tags:
+    victoria-uc:
+- project: puppet-vcsrepo
+  tags:
+    victoria-uc:
+- project: puppet-veritas_hyperscale
+  tags:
+    victoria-uc:
+- project: puppet-vitrage
+  tags:
+    victoria-uc:
+- project: puppet-vlan
+  tags:
+    victoria-uc:
+- project: puppet-vswitch
+  tags:
+    victoria-uc:
+- project: puppet-watcher
+  tags:
+    victoria-uc:
+- project: puppet-xinetd
+  tags:
+    victoria-uc:
+- project: puppet-zaqar
+  tags:
+    victoria-uc:
+- project: puppet-zookeeper
+  tags:
+    victoria-uc:
+- project: pycadf
+  tags:
+    victoria-uc:
+      source-branch: 3.0.0
+- project: rally
+  tags:
+    victoria-uc:
+- project: rally-openstack
+  tags:
+    victoria-uc:
+- project: reno
+  tags:
+    victoria-uc:
+      source-branch: 3.1.0
+- project: requestsexceptions
+  tags:
+    victoria-uc:
+      source-branch: 1.4.0
+- project: rsd-lib
+  tags:
+    victoria-uc:
+      source-branch: 1.2.0
+- project: rsdclient
+  tags:
+    victoria-uc:
+      source-branch: 1.0.2
+- project: sahara
+  tags:
+    victoria-uc:
+- project: sahara-dashboard
+  tags:
+    victoria-uc:
+- project: sahara-image-elements
+  tags:
+    victoria-uc:
+- project: sahara-plugin-ambari
+  tags:
+    victoria-uc:
+- project: sahara-plugin-cdh
+  tags:
+    victoria-uc:
+- project: sahara-plugin-mapr
+  tags:
+    victoria-uc:
+- project: sahara-plugin-spark
+  tags:
+    victoria-uc:
+- project: sahara-plugin-storm
+  tags:
+    victoria-uc:
+- project: sahara-plugin-vanilla
+  tags:
+    victoria-uc:
+- project: sahara-tests
+  tags:
+    victoria-uc:
+- project: saharaclient
+  tags:
+    victoria-uc:
+      source-branch: 3.1.0
+- project: scciclient
+  tags:
+    victoria-uc:
+- project: senlin
+  tags:
+    victoria-uc:
+- project: senlinclient
+  tags:
+    victoria-uc:
+      source-branch: 2.0.1
+- project: shade
+  tags:
+    victoria-uc:
+      source-branch: 1.33.0
+- project: shaker
+  tags:
+    # FIXME(jpena) once timeout-decorator is packaged, and
+    # https://review.rdoproject.org/r/17270 is merged, we can
+    # unpin the versions for train, stein and rocky
+    victoria-uc:
+      source-branch: f5c3a09535dd724f2db9e843e3578ebc5008302f
+- project: sphinx-feature-classification
+  tags:
+    victoria-uc:
+      source-branch: 1.0.1
+- project: stackviz
+  tags:
+    victoria-uc:
+- project: stevedore
+  tags:
+    victoria-uc:
+      source-branch: 2.0.0
+- project: sushy
+  tags:
+    victoria-uc:
+      source-branch: 3.2.0
+- project: sushy-oem-idrac
+  tags:
+    victoria-uc:
+- project: swift
+  tags:
+    victoria-uc:
+- project: swiftclient
+  tags:
+    victoria-uc:
+      source-branch: 3.9.0
+- project: tacker
+  tags:
+    victoria-uc:
+- project: tackerclient
+  tags:
+    victoria-uc:
+      source-branch: 1.1.0
+- project: tap-as-a-service
+  tags:
+    victoria-uc:
+- project: taskflow
+  tags:
+    victoria-uc:
+      source-branch: 4.3.0
+- project: telemetry-tempest-plugin
+  tags:
+    victoria-uc:
+- project: tempest
+  tags:
+    victoria-uc:
+- project: tempest-horizon
+  tags:
+    victoria-uc:
+- project: tempestconf
+  tags:
+    victoria-uc:
+- project: tobiko
+  tags:
+    victoria-uc:
+- project: tooz
+  tags:
+    victoria-uc:
+      source-branch: 2.5.1
+- project: tripleo-ansible
+  tags:
+    victoria-uc:
+- project: tripleo-common
+  tags:
+    victoria-uc:
+- project: tripleo-heat-templates
+  tags:
+    victoria-uc:
+- project: tripleo-image-elements
+  tags:
+    victoria-uc:
+- project: tripleo-ipa
+  tags:
+    victoria-uc:
+- project: tripleo-ipsec
+  tags:
+    victoria-uc:
+- project: tripleo-operator-ansible
+  tags:
+    victoria-uc:
+- project: tripleo-puppet-elements
+  tags:
+    victoria-uc:
+- project: tripleo-repos
+  tags:
+    victoria-uc:
+- project: tripleo-validations
+  tags:
+    victoria-uc:
+- project: tripleoclient
+  tags:
+    victoria-uc:
+- project: trove
+  tags:
+    victoria-uc:
+- project: trove-dashboard
+  tags:
+    victoria-uc:
+- project: trove-tempest-plugin
+  tags:
+    victoria-uc:
+- project: troveclient
+  tags:
+    victoria-uc:
+      source-branch: 4.1.0
+- project: validations-common
+  tags:
+    victoria-uc:
+- project: validations-libs
+  tags:
+    victoria-uc:
+      source-branch: 1.0.0
+- project: virtualbmc
+  tags:
+    victoria-uc:
+      source-branch: 2.1.0
+- project: vitrage
+  tags:
+    victoria-uc:
+- project: vitrage-dashboard
+  tags:
+    victoria-uc:
+      source-branch: 3.0.0
+- project: vitrage-tempest-plugin
+  tags:
+    victoria-uc:
+- project: vitrageclient
+  tags:
+    victoria-uc:
+      source-branch: 4.0.1
+- project: vmware-nsx
+  tags:
+    victoria-uc:
+- project: vmware-nsx-tempest-plugin
+  tags:
+    victoria-uc:
+- project: vmware-nsxlib
+  tags:
+    victoria-uc:
+- project: watcher
+  tags:
+    victoria-uc:
+- project: watcher-tempest-plugin
+  tags:
+    victoria-uc:
+- project: wsme
+  tags:
+    victoria-uc:
+      source-branch: bff9624cbc96bfd04e8d1ed5ee2e586b22a2ba51
+- project: zaqar
+  tags:
+    victoria-uc:
+- project: zaqar-tempest-plugin
+  tags:
+    victoria-uc:
+- project: zaqarclient
+  tags:
+    victoria-uc:
+      source-branch: 1.13.1

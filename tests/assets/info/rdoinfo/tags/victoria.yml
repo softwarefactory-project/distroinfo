@@ -1,0 +1,1055 @@
+packages:
+- project: ansible-config_template
+  tags:
+    victoria:
+- project: ansible-pacemaker
+  tags:
+    victoria:
+- project: ansible-role-atos-hsm
+  tags:
+    victoria:
+- project: ansible-role-chrony
+  tags:
+    victoria:
+- project: ansible-role-container-registry
+  tags:
+    victoria:
+- project: ansible-role-lunasa-hsm
+  tags:
+    victoria:
+- project: ansible-role-openstack-operations
+  tags:
+    victoria:
+- project: ansible-role-redhat-subscription
+  tags:
+    victoria:
+- project: ansible-role-thales-hsm
+  tags:
+    victoria:
+- project: ansible-role-tripleo-modify-image
+  tags:
+    victoria:
+- project: aodh
+  tags:
+    victoria:
+- project: aodhclient
+  tags:
+    victoria:
+- project: automaton
+  tags:
+    victoria:
+- project: barbican
+  tags:
+    victoria:
+- project: barbican-tempest-plugin
+  tags:
+    victoria:
+- project: barbicanclient
+  tags:
+    victoria:
+- project: castellan
+  tags:
+    victoria:
+- project: ceilometer
+  tags:
+    victoria:
+- project: ceilometerclient
+  tags:
+    victoria:
+      source-branch: 3ff6bac3da348bad0b220ab26eab6ad6bfbeb675
+- project: ceilometermiddleware
+  tags:
+    victoria:
+- project: cinder
+  tags:
+    victoria:
+- project: cinder-tempest-plugin
+  tags:
+    victoria:
+- project: cinderclient
+  tags:
+    victoria:
+- project: cinderlib
+  tags:
+    victoria:
+- project: cliff
+  tags:
+    victoria:
+- project: cloudkitty
+  tags:
+    victoria:
+- project: cloudkitty-dashboard
+  tags:
+    victoria:
+- project: cloudkittyclient
+  tags:
+    victoria:
+- project: collectd-gnocchi
+  tags:
+    victoria:
+- project: cursive
+  tags:
+    victoria:
+- project: debtcollector
+  tags:
+    victoria:
+- project: designate
+  tags:
+    # FIXME(ykarel) once FTBFS https://review.rdoproject.org/r/#/c/22584/
+    # is fixed.
+    victoria:
+      source-branch: 4d47719b2638a96f0f2b5f71ddb0e94619fa3980
+- project: designate-dashboard
+  tags:
+    victoria:
+- project: designate-tempest-plugin
+  tags:
+    victoria:
+- project: designateclient
+  tags:
+    victoria:
+- project: dib-utils
+  tags:
+    victoria:
+- project: diskimage-builder
+  tags:
+    victoria:
+- project: dracclient
+  tags:
+    victoria:
+- project: ec2-api
+  tags:
+    victoria:
+- project: ec2api-tempest-plugin
+  tags:
+    victoria:
+- project: futurist
+  tags:
+    victoria:
+- project: glance
+  tags:
+    victoria:
+- project: glance_store
+  tags:
+    victoria:
+- project: glanceclient
+  tags:
+    victoria:
+- project: glare
+  tags:
+    victoria:
+- project: glareclient
+  tags:
+    victoria:
+- project: gnocchi
+  tags:
+    victoria:
+      source-branch: stable/4.3
+- project: gnocchiclient
+  tags:
+    victoria:
+- project: hacking
+  tags:
+    victoria:
+- project: hardware
+  tags:
+    victoria:
+- project: heat
+  tags:
+    victoria:
+- project: heat-agents
+  tags:
+    victoria:
+- project: heat-dashboard
+  tags:
+    victoria:
+- project: heat-tempest-plugin
+  tags:
+    victoria:
+- project: heat-translator
+  tags:
+    victoria:
+- project: heatclient
+  tags:
+    victoria:
+- project: horizon
+  tags:
+    victoria:
+- project: ibmcclient
+  tags:
+    victoria:
+- project: ironic
+  tags:
+    victoria:
+- project: ironic-inspector
+  tags:
+    victoria:
+- project: ironic-inspector-client
+  tags:
+    victoria:
+- project: ironic-lib
+  tags:
+    victoria:
+- project: ironic-prometheus-exporter
+  tags:
+    victoria:
+- project: ironic-python-agent
+  tags:
+    victoria:
+- project: ironic-python-agent-builder
+  tags:
+    victoria:
+- project: ironic-staging-drivers
+  tags:
+    victoria:
+- project: ironic-tempest-plugin
+  tags:
+    victoria:
+- project: ironic-ui
+  tags:
+    victoria:
+- project: ironicclient
+  tags:
+    victoria:
+- project: keystone
+  tags:
+    victoria:
+- project: keystone-tempest-plugin
+  tags:
+    victoria:
+- project: keystoneauth1
+  tags:
+    victoria:
+- project: keystoneclient
+  tags:
+    victoria:
+- project: keystonemiddleware
+  tags:
+    victoria:
+- project: kolla
+  tags:
+    victoria:
+- project: kuryr
+  tags:
+    victoria:
+- project: kuryr-kubernetes
+  tags:
+    victoria:
+- project: kuryr-tempest-plugin
+  tags:
+    victoria:
+- project: magnum
+  tags:
+    victoria:
+- project: magnum-tempest-plugin
+  tags:
+    victoria:
+- project: magnum-ui
+  tags:
+    victoria:
+- project: magnumclient
+  tags:
+    victoria:
+- project: manila
+  tags:
+    victoria:
+- project: manila-tempest-plugin
+  tags:
+    victoria:
+- project: manila-ui
+  tags:
+    victoria:
+- project: manilaclient
+  tags:
+    victoria:
+- project: metalsmith
+  tags:
+    victoria:
+- project: microversion-parse
+  tags:
+    victoria:
+- project: mistral
+  tags:
+    victoria:
+- project: mistral-dashboard
+  tags:
+    victoria:
+- project: mistral-extra
+  tags:
+    victoria:
+- project: mistral-lib
+  tags:
+    victoria:
+- project: mistral-tempest-plugin
+  tags:
+    victoria:
+- project: mistralclient
+  tags:
+    victoria:
+- project: monascaclient
+  tags:
+    victoria:
+- project: mox3
+  tags:
+    victoria:
+- project: murano
+  tags:
+    victoria:
+- project: murano-agent
+  tags:
+    victoria:
+- project: murano-dashboard
+  tags:
+    victoria:
+- project: murano-tempest-plugin
+  tags:
+    victoria:
+- project: muranoclient
+  tags:
+    victoria:
+- project: networking-ansible
+  tags:
+    victoria:
+- project: networking-arista
+  tags:
+    victoria:
+- project: networking-bagpipe
+  tags:
+    victoria:
+- project: networking-baremetal
+  tags:
+    victoria:
+- project: networking-bgpvpn
+  tags:
+    victoria:
+- project: networking-bigswitch
+  tags:
+    victoria:
+- project: networking-generic-switch
+  tags:
+    victoria:
+- project: networking-l2gw
+  tags:
+    victoria:
+- project: networking-l2gw-tempest-plugin
+  tags:
+    victoria:
+- project: networking-mlnx
+  tags:
+    victoria:
+- project: networking-odl
+  tags:
+    victoria:
+- project: networking-omnipath
+  tags:
+    victoria:
+- project: networking-sfc
+  tags:
+    victoria:
+- project: neutron
+  tags:
+    victoria:
+- project: neutron-dynamic-routing
+  tags:
+    victoria:
+- project: neutron-fwaas
+  tags:
+    victoria:
+- project: neutron-lib
+  tags:
+    victoria:
+- project: neutron-tempest-plugin
+  tags:
+    victoria:
+- project: neutron-vpnaas
+  tags:
+    victoria:
+- project: neutronclient
+  tags:
+    victoria:
+- project: nova
+  tags:
+    victoria:
+- project: novaclient
+  tags:
+    victoria:
+- project: novajoin
+  tags:
+    victoria:
+- project: novajoin-tempest-plugin
+  tags:
+    victoria:
+- project: octavia
+  tags:
+    victoria:
+- project: octavia-dashboard
+  tags:
+    victoria:
+- project: octavia-lib
+  tags:
+    victoria:
+- project: octavia-tempest-plugin
+  tags:
+    victoria:
+- project: octaviaclient
+  tags:
+    victoria:
+- project: openstack-macros
+  tags:
+    victoria:
+- project: openstack-selinux
+  tags:
+    victoria:
+- project: openstackclient
+  tags:
+    victoria:
+- project: openstacksdk
+  tags:
+    victoria:
+- project: os-apply-config
+  tags:
+    victoria:
+- project: os-brick
+  tags:
+    victoria:
+- project: os-client-config
+  tags:
+    victoria:
+- project: os-collect-config
+  tags:
+    victoria:
+- project: os-faults
+  tags:
+    victoria:
+- project: os-ken
+  tags:
+    victoria:
+- project: os-net-config
+  tags:
+    victoria:
+- project: os-refresh-config
+  tags:
+    victoria:
+- project: os-resource-classes
+  tags:
+    victoria:
+- project: os-service-types
+  tags:
+    victoria:
+- project: os-testr
+  tags:
+    victoria:
+- project: os-traits
+  tags:
+    victoria:
+- project: os-vif
+  tags:
+    victoria:
+- project: os-win
+  tags:
+    victoria:
+- project: os-xenapi
+  tags:
+    victoria:
+- project: osc-lib
+  tags:
+    victoria:
+- project: osc-placement
+  tags:
+    victoria:
+- project: oslo-cache
+  tags:
+    victoria:
+- project: oslo-concurrency
+  tags:
+    victoria:
+- project: oslo-config
+  tags:
+    victoria:
+- project: oslo-context
+  tags:
+    victoria:
+- project: oslo-db
+  tags:
+    victoria:
+- project: oslo-i18n
+  tags:
+    victoria:
+- project: oslo-log
+  tags:
+    victoria:
+- project: oslo-messaging
+  tags:
+    victoria:
+- project: oslo-middleware
+  tags:
+    victoria:
+- project: oslo-policy
+  tags:
+    victoria:
+- project: oslo-privsep
+  tags:
+    victoria:
+- project: oslo-reports
+  tags:
+    victoria:
+- project: oslo-rootwrap
+  tags:
+    victoria:
+- project: oslo-serialization
+  tags:
+    victoria:
+- project: oslo-service
+  tags:
+    victoria:
+- project: oslo-sphinx
+  tags:
+    victoria:
+      source-branch: f92583cfc34292ec1441368f984c9692346946c4
+- project: oslo-upgradecheck
+  tags:
+    victoria:
+- project: oslo-utils
+  tags:
+    victoria:
+- project: oslo-versionedobjects
+  tags:
+    victoria:
+- project: oslo-vmware
+  tags:
+    victoria:
+- project: oslotest
+  tags:
+    victoria:
+- project: osops-tools-monitoring-oschecks
+  tags:
+    victoria:
+- project: osprofiler
+  tags:
+    victoria:
+- project: oswin-tempest-plugin
+  tags:
+    victoria:
+- project: ovn-octavia-provider
+  tags:
+    victoria:
+- project: ovsdbapp
+  tags:
+    victoria:
+- project: packstack
+  tags:
+    victoria:
+- project: panko
+  tags:
+    victoria:
+- project: pankoclient
+  tags:
+    victoria:
+- project: patrole
+  tags:
+    victoria:
+- project: paunch
+  tags:
+    victoria:
+- project: placement
+  tags:
+    victoria:
+- project: proliantutils
+  tags:
+    victoria:
+- project: puppet-aodh
+  tags:
+    victoria:
+- project: puppet-apache
+  tags:
+    victoria:
+- project: puppet-archive
+  tags:
+    victoria:
+- project: puppet-auditd
+  tags:
+    victoria:
+- project: puppet-barbican
+  tags:
+    victoria:
+- project: puppet-cassandra
+  tags:
+    victoria:
+- project: puppet-ceilometer
+  tags:
+    victoria:
+- project: puppet-ceph
+  tags:
+    victoria:
+- project: puppet-certmonger
+  tags:
+    victoria:
+- project: puppet-cinder
+  tags:
+    victoria:
+- project: puppet-collectd
+  tags:
+    victoria:
+- project: puppet-concat
+  tags:
+    victoria:
+- project: puppet-contrail
+  tags:
+    victoria:
+- project: puppet-corosync
+  tags:
+    victoria:
+- project: puppet-datacat
+  tags:
+    victoria:
+- project: puppet-designate
+  tags:
+    victoria:
+- project: puppet-dns
+  tags:
+    victoria:
+- project: puppet-ec2api
+  tags:
+    victoria:
+- project: puppet-elasticsearch
+  tags:
+    victoria:
+- project: puppet-etcd
+  tags:
+    victoria:
+- project: puppet-fdio
+  tags:
+    victoria:
+- project: puppet-firewall
+  tags:
+    victoria:
+- project: puppet-fluentd
+  tags:
+    victoria:
+- project: puppet-git
+  tags:
+    victoria:
+- project: puppet-glance
+  tags:
+    victoria:
+- project: puppet-gnocchi
+  tags:
+    victoria:
+- project: puppet-haproxy
+  tags:
+    victoria:
+- project: puppet-heat
+  tags:
+    victoria:
+- project: puppet-horizon
+  tags:
+    victoria:
+- project: puppet-inifile
+  tags:
+    victoria:
+- project: puppet-ipaclient
+  tags:
+    victoria:
+- project: puppet-ironic
+  tags:
+    victoria:
+- project: puppet-java
+  tags:
+    victoria:
+- project: puppet-kafka
+  tags:
+    victoria:
+- project: puppet-keepalived
+  tags:
+    victoria:
+- project: puppet-keystone
+  tags:
+    victoria:
+- project: puppet-kibana3
+  tags:
+    victoria:
+- project: puppet-kmod
+  tags:
+    victoria:
+- project: puppet-lib-file_concat
+  tags:
+    victoria:
+- project: puppet-magnum
+  tags:
+    victoria:
+- project: puppet-manila
+  tags:
+    victoria:
+- project: puppet-memcached
+  tags:
+    victoria:
+- project: puppet-midonet
+  tags:
+    victoria:
+- project: puppet-mistral
+  tags:
+    victoria:
+- project: puppet-module-data
+  tags:
+    victoria:
+- project: puppet-mongodb
+  tags:
+    victoria:
+- project: puppet-murano
+  tags:
+    victoria:
+- project: puppet-mysql
+  tags:
+    victoria:
+- project: puppet-n1k-vsm
+  tags:
+    victoria:
+- project: puppet-neutron
+  tags:
+    victoria:
+- project: puppet-nova
+  tags:
+    victoria:
+- project: puppet-nssdb
+  tags:
+    victoria:
+- project: puppet-ntp
+  tags:
+    victoria:
+      source-branch: 4.2.0
+- project: puppet-octavia
+  tags:
+    victoria:
+- project: puppet-openstack_extras
+  tags:
+    victoria:
+- project: puppet-openstacklib
+  tags:
+    victoria:
+- project: puppet-oslo
+  tags:
+    victoria:
+- project: puppet-ovn
+  tags:
+    victoria:
+- project: puppet-pacemaker
+  tags:
+    victoria:
+- project: puppet-panko
+  tags:
+    victoria:
+- project: puppet-placement
+  tags:
+    victoria:
+- project: puppet-powerdns
+  tags:
+    victoria:
+- project: puppet-qdr
+  tags:
+    victoria:
+- project: puppet-rabbitmq
+  tags:
+    victoria:
+- project: puppet-redis
+  tags:
+    victoria:
+- project: puppet-remote
+  tags:
+    victoria:
+- project: puppet-rsync
+  tags:
+    victoria:
+- project: puppet-rsyslog
+  tags:
+    # NOTE(aschultz): rsyslog broke backwards compatibility with
+    # # https://github.com/voxpupuli/puppet-rsyslog/pull/136
+    victoria:
+      source-branch: 2548a0d95c1549b506b7bb2314dd149b028fc04b
+- project: puppet-sahara
+  tags:
+    victoria:
+- project: puppet-sensu
+  tags:
+    victoria:
+- project: puppet-snmp
+  tags:
+    victoria:
+- project: puppet-ssh
+  tags:
+    victoria:
+- project: puppet-staging
+  tags:
+    victoria:
+- project: puppet-stdlib
+  tags:
+    victoria:
+- project: puppet-swift
+  tags:
+    victoria:
+- project: puppet-sysctl
+  tags:
+    victoria:
+- project: puppet-systemd
+  tags:
+    victoria:
+- project: puppet-tacker
+  tags:
+    victoria:
+- project: puppet-tempest
+  tags:
+    victoria:
+- project: puppet-timezone
+  tags:
+    victoria:
+- project: puppet-tomcat
+  tags:
+    victoria:
+- project: puppet-tripleo
+  tags:
+    victoria:
+- project: puppet-trove
+  tags:
+    victoria:
+- project: puppet-uchiwa
+  tags:
+    victoria:
+- project: puppet-vcsrepo
+  tags:
+    victoria:
+- project: puppet-veritas_hyperscale
+  tags:
+    victoria:
+- project: puppet-vitrage
+  tags:
+    victoria:
+- project: puppet-vlan
+  tags:
+    victoria:
+- project: puppet-vswitch
+  tags:
+    victoria:
+- project: puppet-watcher
+  tags:
+    victoria:
+- project: puppet-xinetd
+  tags:
+    victoria:
+- project: puppet-zaqar
+  tags:
+    victoria:
+- project: puppet-zookeeper
+  tags:
+    victoria:
+- project: pycadf
+  tags:
+    victoria:
+- project: rally
+  tags:
+    victoria:
+- project: rally-openstack
+  tags:
+    victoria:
+- project: reno
+  tags:
+    victoria:
+- project: requestsexceptions
+  tags:
+    victoria:
+- project: rsd-lib
+  tags:
+    victoria:
+- project: rsdclient
+  tags:
+    victoria:
+- project: sahara
+  tags:
+    victoria:
+- project: sahara-dashboard
+  tags:
+    victoria:
+- project: sahara-image-elements
+  tags:
+    victoria:
+- project: sahara-plugin-ambari
+  tags:
+    victoria:
+- project: sahara-plugin-cdh
+  tags:
+    victoria:
+- project: sahara-plugin-mapr
+  tags:
+    victoria:
+- project: sahara-plugin-spark
+  tags:
+    victoria:
+- project: sahara-plugin-storm
+  tags:
+    victoria:
+- project: sahara-plugin-vanilla
+  tags:
+    victoria:
+- project: sahara-tests
+  tags:
+    victoria:
+- project: saharaclient
+  tags:
+    victoria:
+- project: scciclient
+  tags:
+    victoria:
+- project: senlin
+  tags:
+    victoria:
+- project: senlinclient
+  tags:
+    victoria:
+- project: shade
+  tags:
+    victoria:
+- project: shaker
+  tags:
+    victoria:
+- project: sphinx-feature-classification
+  tags:
+    victoria:
+- project: stackviz
+  tags:
+    victoria:
+- project: stevedore
+  tags:
+    victoria:
+- project: sushy
+  tags:
+    victoria:
+- project: sushy-oem-idrac
+  tags:
+    victoria:
+- project: swift
+  tags:
+    victoria:
+- project: swiftclient
+  tags:
+    victoria:
+- project: tacker
+  tags:
+    victoria:
+- project: tackerclient
+  tags:
+    victoria:
+- project: tap-as-a-service
+  tags:
+    victoria:
+- project: taskflow
+  tags:
+    victoria:
+- project: telemetry-tempest-plugin
+  tags:
+    victoria:
+- project: tempest
+  tags:
+    victoria:
+- project: tempest-horizon
+  tags:
+    victoria:
+- project: tempestconf
+  tags:
+    victoria:
+- project: tobiko
+  tags:
+    victoria:
+- project: tooz
+  tags:
+    victoria:
+- project: tripleo-ansible
+  tags:
+    victoria:
+- project: tripleo-common
+  tags:
+    victoria:
+- project: tripleo-heat-templates
+  tags:
+    victoria:
+- project: tripleo-image-elements
+  tags:
+    victoria:
+- project: tripleo-ipa
+  tags:
+    victoria:
+- project: tripleo-ipsec
+  tags:
+    victoria:
+- project: tripleo-operator-ansible
+  tags:
+    victoria:
+- project: tripleo-puppet-elements
+  tags:
+    victoria:
+- project: tripleo-repos
+  tags:
+    victoria:
+- project: tripleo-validations
+  tags:
+    victoria:
+- project: tripleoclient
+  tags:
+    victoria:
+- project: trove
+  tags:
+    victoria:
+- project: trove-dashboard
+  tags:
+    victoria:
+- project: trove-tempest-plugin
+  tags:
+    victoria:
+- project: troveclient
+  tags:
+    victoria:
+- project: validations-common
+  tags:
+    victoria:
+- project: validations-libs
+  tags:
+    victoria:
+- project: virtualbmc
+  tags:
+    victoria:
+- project: vitrage
+  tags:
+    victoria:
+- project: vitrage-dashboard
+  tags:
+    victoria:
+- project: vitrage-tempest-plugin
+  tags:
+    victoria:
+- project: vitrageclient
+  tags:
+    victoria:
+- project: vmware-nsx
+  tags:
+    victoria:
+- project: vmware-nsx-tempest-plugin
+  tags:
+    victoria:
+- project: vmware-nsxlib
+  tags:
+    victoria:
+- project: watcher
+  tags:
+    victoria:
+- project: watcher-tempest-plugin
+  tags:
+    victoria:
+- project: wsme
+  tags:
+    victoria:
+- project: zaqar
+  tags:
+    victoria:
+- project: zaqar-tempest-plugin
+  tags:
+    victoria:
+- project: zaqarclient
+  tags:
+    victoria:
