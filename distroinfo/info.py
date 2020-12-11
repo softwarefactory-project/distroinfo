@@ -17,7 +17,7 @@ import six
 from distroinfo import exception
 from distroinfo import fetch
 from distroinfo import parse
-
+from typing import *
 
 class DistroInfo(object):
     def __init__(self,
@@ -64,7 +64,7 @@ class DistroInfo(object):
             # support both a single file and a list
             self.info_files = [self.info_files]
 
-    def get_info(self, apply_tag=None, info_dicts=False):
+    def get_info(self, apply_tag=None, info_dicts=False) -> Any:
         """
         Get data from distroinfo instance.
 
@@ -73,6 +73,7 @@ class DistroInfo(object):
         :return: parsed info metadata
         """
         raw_infos = self.fetcher.fetch(*self.info_files)
-        raw_info = parse.merge_infos(*raw_infos, info_dicts=info_dicts)
+        raw_info = parse.merge_infos(raw_infos, info_dicts=info_dicts)
         info = parse.parse_info(raw_info, apply_tag=apply_tag)
         return info
+

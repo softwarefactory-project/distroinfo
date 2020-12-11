@@ -24,7 +24,19 @@ except ImportError:
 from distroinfo import exception
 
 
-def parse_info(raw_info, apply_tag=None):
+from typing import TypedDict, Any, List, Dict
+
+class Info(TypedDict):
+    packages: Dict[Any,Any]
+    releases: Dict[Any,Any]
+
+class InfoList(TypedDict):
+    packages: List[Any]
+    releases: List[Any]
+
+
+
+def parse_info(raw_info: InfoList, apply_tag=None) -> Any:
     """
     Parse raw rdoinfo metadata inplace.
 
@@ -48,7 +60,7 @@ def parse_release_repo(repo, default_branch=None):
     return repo
 
 
-def parse_releases(info):
+def parse_releases(info: InfoList) -> Any:
     try:
         releases = info['releases']
     except KeyError:
@@ -148,7 +160,9 @@ def _check_for_duplicates(pkg, pkgs):
     return False
 
 
-def parse_packages(info, apply_tag=None):
+def parse_packages(info: Union[Info, InfoList], apply_tag=None) -> None:
+    """ Modify the info
+    """
     try:
         pkgs = info['packages']
     except KeyError:
@@ -226,8 +240,7 @@ def info2dicts(info, in_place=False):
         info_dicts['releases'] = list2dict(releases, 'name')
     return info_dicts
 
-
-def info2lists(info, in_place=False):
+def info2lists(info : Info, in_place=False) -> InfoList:
 
     """
     Return info with:
@@ -237,12 +250,12 @@ def info2lists(info, in_place=False):
 
     info2list(info2dicts(info)) == info
     """
-    if 'packages' not in info and 'releases' not in info:
-        return info
+    # if 'packages' not in info and 'releases' not in info:
+    #     return info
     if in_place:
-        info_lists = info
+        info_lists: InfoList = info  # type: ignore
     else:
-        info_lists = info.copy()
+        info_lists = info.copy() #  type: ignore
     packages = info.get('packages')
     if packages:
         info_lists['packages'] = list(packages.values())
@@ -251,16 +264,17 @@ def info2lists(info, in_place=False):
         info_lists['releases'] = list(releases.values())
     return info_lists
 
-
-def merge_infos(*infos, **kwargs):
+def merge_infos(infos: List[InfoList], info_dicts: List[Info]) -> InfoList:
+    """
+    Return a merged info from a list of InfoList object and a list of Info object (info_dicts)
+    """
     if not infos:
-        return {}
-    info_dicts = kwargs.get('info_dicts', False)
-    in_place = kwargs.get('in_place', True)
+        return dict(packages=[], releases=[])
+    in_place = True
     if len(infos) == 1:
         if info_dicts:
             return info2dicts(infos[0], in_place=in_place)
-        return infos[0]
+        return (infos[0])
     info_dict = info2dicts(infos[0], in_place=in_place)
     for info_next in infos[1:]:
         info_next_dict = info2dicts(info_next, in_place=in_place)
