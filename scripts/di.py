@@ -37,7 +37,7 @@ from distroinfo import exception
 from distroinfo.info import DistroInfo
 
 
-def get_distroinfo(info_url, info_files, fetcher=None, cache_dir=None):
+def get_distroinfo(info_url, info_files, fetcher=None, cache_dir=None) -> DistroInfo:
     kwargs = {}
     # use desired distroinfo fetcher
     if fetcher == 'local':
@@ -53,7 +53,7 @@ def get_distroinfo(info_url, info_files, fetcher=None, cache_dir=None):
     return DistroInfo(info_files, **kwargs)
 
 
-def fetch(info_url, info_files, fetcher=None, cache_dir=None):
+def fetch(info_url : str, info_files: str, fetcher=None, cache_dir=None) -> int:
     if fetcher:
         fetch_str = ' %s' % fetcher
     else:
@@ -74,7 +74,7 @@ def fetch(info_url, info_files, fetcher=None, cache_dir=None):
 
 
 def dump(info_url, info_files, fetcher=None, cache_dir=None,
-         yaml_out=None, json_out=None):
+         yaml_out=None, json_out=None) -> int:
     di = get_distroinfo(info_url, info_files,
                         fetcher=fetcher, cache_dir=cache_dir)
     info = di.get_info()

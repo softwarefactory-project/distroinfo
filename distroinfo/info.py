@@ -17,17 +17,43 @@ import six
 from distroinfo import exception
 from distroinfo import fetch
 from distroinfo import parse
+from typing import *
 
+
+from typing import TypedDict, Any, List, Union, Dict
+
+maybeStr = Optional[str]
+
+Package = TypedDict("Package", {
+    "name": str,
+    "tags": List[str],
+    "project": maybeStr,
+    "upstream": maybeStr,
+    "extra-default-field": maybeStr,
+    "extra-conf-field": maybeStr,
+    "master-distgit": maybeStr,
+    "maintainers": List[str],
+})
+
+PackageDefault = TypedDict("PackageDefault", {
+    "extra-default-field": maybeStr,
+})
+
+Info = TypedDict("Info", {
+    "packages": List[Package],
+    "package-default": PackageDefault
+})
+    
 
 class DistroInfo(object):
     def __init__(self,
-                 info_files,
+                 info_files : Union[str, List[str]],
                  fetcher=None,
                  local_info=None,
                  remote_info=None,
                  remote_git_info=None,
                  cache_ttl=3600,
-                 cache_base_path=None):
+                 cache_base_path=None) -> None:
         """
         Specify distroinfo instance to query.
 
@@ -64,7 +90,7 @@ class DistroInfo(object):
             # support both a single file and a list
             self.info_files = [self.info_files]
 
-    def get_info(self, apply_tag=None, info_dicts=False):
+    def get_info(self, apply_tag : Optional[str] =None, info_dicts=False) -> Info:
         """
         Get data from distroinfo instance.
 
@@ -73,6 +99,7 @@ class DistroInfo(object):
         :return: parsed info metadata
         """
         raw_infos = self.fetcher.fetch(*self.info_files)
-        raw_info = parse.merge_infos(*raw_infos, info_dicts=info_dicts)
+        raw_info = parse.merge_infos(raw_infos, info_dicts=info_dicts)
         info = parse.parse_info(raw_info, apply_tag=apply_tag)
         return info
+

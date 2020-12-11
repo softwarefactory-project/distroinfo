@@ -3,7 +3,7 @@ import os
 import logging
 
 from distroinfo import query
-
+from distroinfo.info import Info
 
 ASSETS_PATH = os.path.join(os.path.dirname(__file__), 'assets')
 INFO_ASSETS_PATH = os.path.join(ASSETS_PATH, 'info')
@@ -28,7 +28,7 @@ def assert_dict_contains(tested, expected):
         assert tested[key] == val
 
 
-def assert_rdoinfo_base(info):
+def assert_rdoinfo_base(info : Info) -> None:
     """
     Make sure data from rdoinfo rdo.yml file is parsed correctly
     by checking the flagship nova package.
@@ -60,7 +60,7 @@ def assert_rdoinfo_base(info):
     assert 'maintainers' in pkg
 
 
-def assert_rdoinfo_deps(info):
+def assert_rdoinfo_deps(info : Info) -> None:
     """
     Make sure data from rdoinfo rdo.yml file is parsed correctly
     by checking python-sphinx dependency packages.
@@ -84,6 +84,6 @@ def assert_rdoinfo_deps(info):
     assert 'maintainers' in pkg
 
 
-def assert_rdoinfo_full(info):
+def assert_rdoinfo_full(info: Info) -> None:
     assert_rdoinfo_base(info)
     assert_rdoinfo_deps(info)

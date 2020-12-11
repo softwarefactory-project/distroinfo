@@ -5,7 +5,7 @@ from distroinfo.query import get_release
 import tests.test_common as common
 
 
-def test_remote_info():
+def test_remote_info() -> None:
     di = DistroInfo('remote.yml',
                     local_info=common.get_test_info_path('minimal'))
     info = di.get_info()
@@ -14,6 +14,7 @@ def test_remote_info():
     assert edf == 'foo-default-%(project)s'
 
     nova = get_package(info, 'openstack-nova')
+    assert nova is not None
     assert nova['extra-default-field'] == 'foo-default-nova'
     assert nova['extra-conf-field'] == 'foo-conf-nova'
     assert nova['master-distgit'] == 'overriden-nova'

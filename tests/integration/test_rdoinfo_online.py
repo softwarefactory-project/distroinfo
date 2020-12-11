@@ -10,7 +10,7 @@ RDOINFO_RAW_URL = ('https://raw.githubusercontent.com/'
                    'redhat-openstack/rdoinfo/master/')
 
 
-def test_rdoinfo_remote_fetch(tmpdir):
+def test_rdoinfo_remote_fetch(tmpdir: str) -> None:
     log_stream = common.capture_distroinfo_logger()
     remote_di = DistroInfo('rdo-full.yml',
                            remote_info=RDOINFO_RAW_URL,

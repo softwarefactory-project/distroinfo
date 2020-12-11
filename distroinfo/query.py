@@ -23,7 +23,8 @@ except ImportError:
     from collections import Iterable
 
 from distroinfo import exception
-
+from distroinfo.info import Info, Package
+from typing import Optional
 
 def get_release(info, release):
     for rls in info['releases']:
@@ -32,14 +33,14 @@ def get_release(info, release):
     return None
 
 
-def get_package(info, name):
+def get_package(info: Info, name: str) -> Optional[Package]:
     for pkg in info['packages']:
         if pkg['name'] == name:
             return pkg
     return None
 
 
-def find_package(info, package, strict=False):
+def find_package(info: Info, package, strict=False) -> Optional[Package]:
     # 1. strict package name matching (openstack-nova)
     pkg = get_package(info, package)
     if pkg:
@@ -47,12 +48,12 @@ def find_package(info, package, strict=False):
     # 2. strict project/upstream matching (nova, git://../openstack/nova)
     ps = strip_project_url(package)
     for pkg in info['packages']:
-        if 'project' in pkg and pkg['project'].lower() == ps:
+        project = pkg.get("project")
+        if project and project.lower() == ps:
             return pkg
-        if 'upstream' in pkg:
-            upstream = pkg['upstream']
-            if strip_project_url(upstream) == ps:
-                return pkg
+        upstream = pkg.get("upstream")
+        if upstream and strip_project_url(upstream) == ps:
+            return pkg
     if strict:
         return None
     # 3. best effort
@@ -60,7 +61,8 @@ def find_package(info, package, strict=False):
     psl = ps.lower()
     if is_url:
         for pkg in info['packages']:
-            if 'project' in pkg and pkg['project'].lower() in psl:
+            project = pkg.get("project")
+            if project and project.lower() in psl:
                 return pkg
     for pkg in info['packages']:
         if psl in pkg['name'].lower():
