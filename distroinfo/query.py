@@ -153,6 +153,31 @@ def tags_diff(info1, info2, tagsname='tags'):
     return diff
 
 
+def attr_diff(info1, info2, attrname):
+    changedpkgs = []
+    for pkg2 in info2["packages"]:
+        if pkg2 not in info1["packages"]:
+            changedpkgs.append(pkg2)
+    diff = []
+    for pkg2 in changedpkgs:
+        foundpkg = False
+        for pkg1 in info1["packages"]:
+            if pkg1['project'] == pkg2['project']:
+                foundpkg = True
+                break
+        updated_attrs = []
+        if foundpkg:
+            attr1 = pkg1.get(attrname)
+            if pkg2.get(attrname) != attr1:
+                updated_attrs.append(pkg2.get(attrname))
+        else:
+            if pkg2.get(attrname):
+                updated_attrs = pkg2.get(attrname)
+        if updated_attrs:
+            diff.append((pkg2['name'], updated_attrs))
+    return diff
+
+
 def strip_project_url(url):
     """strip proto:// | openstack/ prefixes and .git | -distgit suffixes"""
     m = re.match(r'(?:[^:]+://)?(.*)', url)
