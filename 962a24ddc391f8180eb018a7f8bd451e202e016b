@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "92f2f372_39c5cc9b",
+        "filename": "distroinfo/query.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2021-02-25T13:39:15Z",
+      "side": 1,
+      "message": "Sure, I\u0027ll add it.",
+      "parentUuid": "7803f757_51431878",
+      "revId": "962a24ddc391f8180eb018a7f8bd451e202e016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aa383841_caf3e14c",
         "filename": "distroinfo/query.py",
         "patchSetId": 3
@@ -30,6 +48,30 @@
       "writtenOn": "2021-02-25T12:29:32Z",
       "side": 1,
       "message": "Is updated_attrs a list or an attribute value? Shouldn\u0027t L172 uses an `\u003d` assignment, or L175 uses `append` instead of `\u003d`?",
+      "range": {
+        "startLine": 171,
+        "startChar": 0,
+        "endLine": 175,
+        "endChar": 50
+      },
+      "revId": "962a24ddc391f8180eb018a7f8bd451e202e016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d484d31_09a826bc",
+        "filename": "distroinfo/query.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2021-02-25T13:39:15Z",
+      "side": 1,
+      "message": "Actually, it should be append, right. I basically copied/modified the tags_diff and missed this part.",
+      "parentUuid": "aa383841_caf3e14c",
       "range": {
         "startLine": 171,
         "startChar": 0,
