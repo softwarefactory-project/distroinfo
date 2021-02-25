@@ -48,7 +48,7 @@ packages:
   conf: fedora-dependency
 - project: python-PyMySQL
   name: python-PyMySQL
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-routes
   name: python-routes
   conf: fedora-dependency
@@ -63,7 +63,7 @@ packages:
   conf: fedora-dependency
 - project: python-txaio
   name: python-txaio
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-pint
   name: python-pint
   conf: fedora-dependency
@@ -126,7 +126,7 @@ packages:
   conf: fedora-dependency
 - project: python-psutil
   name: python-psutil
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-pip
   name: python-pip
   conf: fedora-dependency
@@ -207,7 +207,7 @@ packages:
   conf: fedora-dependency
 - project: python-pysaml2
   name: python-pysaml2
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: nagios-plugins
   name: nagios-plugins
   conf: fedora-dependency
@@ -222,7 +222,7 @@ packages:
   conf: fedora-dependency
 - project: python-ldap3
   name: python-ldap3
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-cradox
   name: python-cradox
   conf: rdo-dependency
@@ -237,7 +237,7 @@ packages:
   conf: rdo-dependency
 - project: python-pynacl
   name: python-pynacl
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-pyngus
   name: python-pyngus
   conf: fedora-dependency
@@ -282,7 +282,7 @@ packages:
   conf: fedora-dependency
 - project: python-dateutil
   name: python-dateutil
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-cycler
   name: python-cycler
   conf: rdo-dependency
@@ -392,7 +392,7 @@ packages:
   conf: rdo-dependency
 - project: python-pyroute2
   name: python-pyroute2
-  conf: rdo-dependency
+  conf: fedora-dependency
   maintainers:
   - skaplons@redhat.com
   upstream: https://github.com/svinota/pyroute2.git
@@ -431,7 +431,7 @@ packages:
   conf: fedora-dependency
 - project: python-autobahn
   name: python-autobahn
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-lz4
   name: python-lz4
   conf: rdo-dependency
@@ -484,7 +484,7 @@ packages:
   conf: fedora-dependency
 - project: python-ddt
   name: python-ddt
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-prettytable
   name: python-prettytable
   conf: fedora-dependency
@@ -508,6 +508,9 @@ packages:
   conf: fedora-dependency
   maintainers:
   - mbayer@redhat.com
+- project: python-sqlalchemy-filters
+  name: python-sqlalchemy-filters
+  conf: fedora-dependency
 - project: python-sqlalchemy-utils
   name: python-sqlalchemy-utils
   conf: fedora-dependency
@@ -535,7 +538,7 @@ packages:
   conf: fedora-dependency
 - project: python-sysv_ipc
   name: python-sysv_ipc
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-XStatic-objectpath
   name: python-XStatic-objectpath
   conf: fedora-dependency
@@ -626,7 +629,7 @@ packages:
   conf: fedora-dependency
 - project: python-paramiko
   name: python-paramiko
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-mox
   name: python-mox
   conf: fedora-dependency
@@ -674,7 +677,7 @@ packages:
   conf: rdo-dependency
 - project: python-pecan
   name: python-pecan
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: Xaw3d
   name: Xaw3d
   conf: fedora-dependency
@@ -704,7 +707,7 @@ packages:
   conf: fedora-dependency
 - project: python-eventlet
   name: python-eventlet
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-XStatic
   name: python-XStatic
   conf: fedora-dependency
@@ -716,7 +719,7 @@ packages:
   conf: fedora-dependency
 - project: python-msgpack
   name: python-msgpack
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-smmap
   name: python-smmap
   conf: fedora-dependency
@@ -789,7 +792,7 @@ packages:
   conf: fedora-dependency
 - project: python-voluptuous
   name: python-voluptuous
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: rabbitmq-server
   name: rabbitmq-server
   conf: fedora-dependency
@@ -815,7 +818,7 @@ packages:
   conf: fedora-dependency
 - project: python-pyghmi
   name: python-pyghmi
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-nose
   name: python-nose
   conf: fedora-dependency
@@ -1064,7 +1067,7 @@ packages:
   conf: rdo-dependency
 - project: python-ansible-runner
   name: python-ansible-runner
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-ipaddress
   name: python-ipaddress
   conf: fedora-dependency
@@ -1078,7 +1081,7 @@ packages:
   - lemenkov@gmail.com
 - project: GitPython
   name: GitPython
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-django-nose
   name: python-django-nose
   conf: fedora-dependency
@@ -1108,7 +1111,7 @@ packages:
   conf: rdo-dependency
 - project: python-dulwich
   name: python-dulwich
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: pyflakes
   name: pyflakes
   conf: fedora-dependency
@@ -1120,7 +1123,7 @@ packages:
   conf: fedora-dependency
 - project: python-rsa
   name: python-rsa
-  conf: fedora-dependency
+  conf: rdo-dependency
 - project: fdupes
   name: fdupes
   conf: fedora-dependency
@@ -1156,10 +1159,10 @@ packages:
   conf: fedora-dependency
 - project: python-tenacity
   name: python-tenacity
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-tornado
   name: python-tornado
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-snappy
   name: python-snappy
   conf: fedora-dependency
@@ -1225,7 +1228,7 @@ packages:
   conf: fedora-dependency
 - project: python-cryptography
   name: python-cryptography
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: redis
   name: redis
   conf: fedora-dependency
@@ -1339,7 +1342,7 @@ packages:
   conf: fedora-dependency
 - project: python-daemon
   name: python-daemon
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: fontawesome-fonts
   name: fontawesome-fonts
   conf: fedora-dependency
@@ -1371,7 +1374,7 @@ packages:
   conf: fedora-dependency
 - project: python-six
   name: python-six
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-botocore
   name: python-botocore
   conf: fedora-dependency
@@ -1505,7 +1508,7 @@ packages:
   conf: rdo-dependency
 - project: python-scp
   name: python-scp
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-daiquiri
   name: python-daiquiri
   conf: fedora-dependency
@@ -1520,7 +1523,7 @@ packages:
   conf: fedora-dependency
 - project: python-tabulate
   name: python-tabulate
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-sphinxcontrib-actdiag
   name: python-sphinxcontrib-actdiag
   conf: fedora-dependency
@@ -1625,7 +1628,7 @@ packages:
   - moguimar@redhat.com
 - project: python-flask
   name: python-flask
-  conf: rdo-dependency
+  conf: fedora-dependency
   maintainers:
   - ltoscano@redhat.com
   - moguimar@redhat.com
@@ -1944,13 +1947,13 @@ packages:
   conf: rdo-dependency
 - project: python-sphinxcontrib-svg2pdfconverter
   name: python-sphinxcontrib-svg2pdfconverter
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-timeout-decorator
   name: python-timeout-decorator
   conf: rdo-dependency
 - project: python-zipp
   name: python-zipp
-  conf: fedora-dependency
+  conf: rdo-dependency
 - project: python-SecretStorage
   name: python-SecretStorage
   conf: fedora-dependency
@@ -2097,10 +2100,10 @@ packages:
   conf: fedora-dependency
 - project: python-importlib-resources
   name: python-importlib-resources
-  conf: fedora-dependency
+  conf: rdo-dependency
 - project: python-importlib-metadata
   name: python-importlib-metadata
-  conf: fedora-dependency
+  conf: rdo-dependency
 - project: python-pytest-forked
   name: python-pytest-forked
   conf: fedora-dependency
@@ -2424,7 +2427,67 @@ packages:
   conf: rdo-dependency
 - project: python-s3transfer
   name: python-s3transfer
-  conf: rdo-dependency
+  conf: fedora-dependency
 - project: python-responses
   name: python-responses
+  conf: fedora-dependency
+- project: python-typing-extensions
+  name: python-typing-extensions
+  conf: fedora-dependency
+- project: python-typeguard
+  name: python-typeguard
+  conf: rdo-dependency
+- project: python-sphinx-epytext
+  name: python-sphinx-epytext
+  conf: fedora-dependency
+- project: python-pyrsistent
+  name: python-pyrsistent
+  conf: fedora-dependency
+- project: python-zstd
+  name: python-zstd
+  conf: fedora-dependency
+- project: python-httpx
+  name: python-httpx
+  conf: rdo-dependency
+- project: ara
+  name: ara
+  conf: rdo-dependency
+- project: python-immutables
+  name: python-immutables
+  conf: rdo-dependency
+- project: python-contextvars
+  name: python-contextvars
+  conf: rdo-dependency
+- project: python-curio
+  name: python-curio
+  conf: rdo-dependency
+- project: python-sniffio
+  name: python-sniffio
+  conf: fedora-dependency
+- project: python-hstspreload
+  name: python-hstspreload
+  conf: fedora-dependency
+- project: python-httpcore
+  name: python-httpcore
+  conf: fedora-dependency
+- project: python-h11
+  name: python-h11
+  conf: fedora-dependency
+- project: python-h2
+  name: python-h2
+  conf: rdo-dependency
+- project: python-hpack
+  name: python-hpack
+  conf: fedora-dependency
+- project: python-hyperframe
+  name: python-hyperframe
+  conf: fedora-dependency
+- project: python-sphinx-removed-in
+  name: python-sphinx-removed-in
+  conf: fedora-dependency
+- project: python-semver
+  name: python-semver
+  conf: fedora-dependency
+- project: python-natsort
+  name: python-natsort
   conf: fedora-dependency
