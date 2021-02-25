@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7803f757_51431878",
+        "filename": "distroinfo/query.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2021-02-25T12:29:32Z",
+      "side": 1,
+      "message": "Could this have a documentation, and perhaps a doctest?",
+      "revId": "962a24ddc391f8180eb018a7f8bd451e202e016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa383841_caf3e14c",
+        "filename": "distroinfo/query.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2021-02-25T12:29:32Z",
+      "side": 1,
+      "message": "Is updated_attrs a list or an attribute value? Shouldn\u0027t L172 uses an `\u003d` assignment, or L175 uses `append` instead of `\u003d`?",
+      "range": {
+        "startLine": 171,
+        "startChar": 0,
+        "endLine": 175,
+        "endChar": 50
+      },
+      "revId": "962a24ddc391f8180eb018a7f8bd451e202e016b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
