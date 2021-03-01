@@ -1,0 +1,11 @@
+Code-Review+1: Jon Schlueter <jschluet@redhat.com>
+Code-Review+1: Tristan de Cacqueray <tdecacqu@redhat.com>
+Code-Review+1: Joel Capitao <jcapitao@redhat.com>
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Verified+2: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-by: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-at: Mon, 01 Mar 2021 12:18:05 +0000
+Reviewed-on: https://softwarefactory-project.io/r/21178
+Project: distroinfo
+Branch: refs/heads/master
