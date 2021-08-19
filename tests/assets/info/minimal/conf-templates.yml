@@ -2,7 +2,7 @@
 package-default:
   name: python-%(project)s
   distgit: ssh://pkgs.fedoraproject.org/python-%(project)s.git
-  patches: http://review.rdoproject.org/r/p/openstack/%(project)s.git
+  patches: http://review.rdoproject.org/r/openstack/%(project)s.git
   master-distgit: https://github.com/rdo-packages/%(project)s-distgit.git
   tags:
     rocky:
@@ -14,7 +14,7 @@ package-configs:
     name: openstack-%(project)s
     upstream: git://git.openstack.org/openstack/%(project)s
     distgit: https://github.com/rdo-packages/%(project)s-distgit.git
-    patches: http://review.rdoproject.org/r/p/openstack/%(project)s.git
+    patches: http://review.rdoproject.org/r/openstack/%(project)s.git
     master-distgit: https://github.com/rdo-packages/%(project)s-distgit.git
     review-patches: ssh://review.rdoproject.org:29418/openstack/%(project)s.git
     review-origin: ssh://review.rdoproject.org:29418/openstack/%(project)s-distgit.git
@@ -25,7 +25,7 @@ package-configs:
     name: python-%(project)s
     upstream: git://git.openstack.org/openstack/python-%(project)s
     distgit: https://github.com/rdo-packages/%(project)s-distgit.git
-    patches: http://review.rdoproject.org/r/p/openstack/%(project)s.git
+    patches: http://review.rdoproject.org/r/openstack/%(project)s.git
     master-distgit: https://github.com/rdo-packages/%(project)s-distgit.git
     review-patches: ssh://review.rdoproject.org:29418/openstack/%(project)s.git
     review-origin: ssh://review.rdoproject.org:29418/openstack/%(project)s-distgit.git
@@ -36,7 +36,7 @@ package-configs:
     name: python-%(project)s
     upstream: git://git.openstack.org/openstack/%(project)s
     distgit: https://github.com/rdo-packages/%(project)s-distgit.git
-    patches: http://review.rdoproject.org/r/p/openstack/%(project)s.git
+    patches: http://review.rdoproject.org/r/openstack/%(project)s.git
     master-distgit: https://github.com/rdo-packages/%(project)s-distgit.git
     review-patches: ssh://review.rdoproject.org:29418/openstack/%(project)s.git
     review-origin: ssh://review.rdoproject.org:29418/openstack/%(project)s-distgit.git
@@ -48,7 +48,7 @@ package-configs:
     name: '%(project)s'
     upstream: git://git.openstack.org/openstack/%(project)s
     distgit: https://github.com/rdo-packages/%(project)s-distgit.git
-    patches: http://review.rdoproject.org/r/p/puppet/%(project)s.git
+    patches: http://review.rdoproject.org/r/puppet/%(project)s.git
     master-distgit: https://github.com/rdo-packages/%(project)s-distgit.git
     review-patches: ssh://review.rdoproject.org:29418/puppet/%(project)s.git
     review-origin: ssh://review.rdoproject.org:29418/puppet/%(project)s-distgit.git

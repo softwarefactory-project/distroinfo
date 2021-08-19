@@ -21,7 +21,7 @@
           export TARGET="centos8"
           export ZUUL_BRANCH="rpm-master"
           export PYTHON_VERSION=py36
-          timeout --signal=SIGKILL 3600 ./scripts/run_tests.sh http://review.rdoproject.org/r/p/rdoinfo.git ${TARGET} https://trunk.rdoproject.org/centos8/
+          timeout --signal=SIGKILL 3600 ./scripts/run_tests.sh http://review.rdoproject.org/r/rdoinfo.git ${TARGET} https://trunk.rdoproject.org/centos8/
         chdir: "{{ working_dir }}/DLRN"
     - name: Copy DLRN logs for collection
       shell:

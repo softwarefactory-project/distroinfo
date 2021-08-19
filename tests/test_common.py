@@ -44,7 +44,7 @@ def assert_rdoinfo_base(info):
         'upstream':
             'https://opendev.org/openstack/nova',
         'patches':
-            'http://review.rdoproject.org/r/p/openstack/nova.git',
+            'http://review.rdoproject.org/r/openstack/nova.git',
         'distgit':
             'https://github.com/rdo-packages/nova-distgit.git',
         'master-distgit':
