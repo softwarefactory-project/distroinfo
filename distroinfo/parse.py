@@ -39,12 +39,13 @@ def parse_info(raw_info, apply_tag=None):
 
 def parse_release_repo(repo, default_branch=None):
     if 'name' not in repo:
-        raise exception.MissingRequiredItem(item='repo.name')
+        raise exception.MissingRequiredItem(item='repo.name in %s' % repo)
     if 'branch' not in repo:
         if default_branch:
             repo['branch'] = default_branch
         else:
-            raise exception.MissingRequiredItem(item='repo.branch')
+            raise exception.MissingRequiredItem(
+                item='repo.branch for repo %s' % repo['name'])
     return repo
 
 
@@ -62,11 +63,13 @@ def parse_releases(info):
         try:
             rls_name = rls['name']
         except KeyError:
-            raise exception.MissingRequiredItem(item='release.name')
+            raise exception.MissingRequiredItem(
+                item='release.name in %s' % rls)
         try:
             repos = rls['repos']
         except KeyError:
-            raise exception.MissingRequiredItem(item='release.builds')
+            raise exception.MissingRequiredItem(
+                item='release.repos for release %s' % rls_name)
         default_branch = rls.get('branch')
         for repo in repos:
             parse_release_repo(repo, default_branch)
@@ -117,7 +120,7 @@ def parse_package(pkg, info, apply_tag=None):
     try:
         name = pkg['name']
     except KeyError:
-        raise exception.MissingRequiredItem(item='package.name')
+        raise exception.MissingRequiredItem(item='package.name in %s' % pkg)
     if 'project' not in pkg:
         raise exception.MissingRequiredItem(
             item="project for '%s' package" % name)
