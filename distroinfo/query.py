@@ -68,6 +68,31 @@ def find_package(info, package, strict=False):
     return None
 
 
+def find_element(info, needle, info_key='osp_releases'):
+    '''Find a matching needle in a custom list of dict'''
+    if info_key not in info:
+        return None
+
+    for elem in info[info_key]:
+        finding = __find_element(elem, needle)
+        if finding:
+            return elem
+    return None
+
+
+def __find_element(data, needle):
+    '''Helper for recursions, used by find_element()'''
+    for elem in data:
+        if isinstance(data, dict):
+            elem = data[elem]
+        if needle in elem:
+            return data
+        if isinstance(elem, list) or isinstance(elem, dict):
+            res = __find_element(elem, needle)
+            return res
+    return None
+
+
 def filter_pkgs(pkgs, rexen):
     filter_wrapper = partial(_match_pkg, rexen)
     return list(filter(filter_wrapper, pkgs))
