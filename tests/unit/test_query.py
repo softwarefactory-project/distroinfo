@@ -76,3 +76,34 @@ def test_attr_diff_2_diffs():
 
     diff = query.attr_diff(info, info2, 'upstream')
     assert(len(diff) == 2)
+
+
+def test_find_element_ok():
+    di = DistroInfo('minimal.yml',
+                    local_info=common.get_test_info_path('minimal'))
+    info = di.get_info()
+    finding = query.find_element(info, 'queens',
+                                 info_key='releases')
+
+    assert(finding)
+    assert(finding == info['releases'][1])
+
+
+def test_find_element_not_found():
+    di = DistroInfo('minimal.yml',
+                    local_info=common.get_test_info_path('minimal'))
+    info = di.get_info()
+    finding = query.find_element(info, 'aabb',
+                                 info_key='releases')
+    assert(not finding)
+
+
+def test_find_element_in_sub_dict_list():
+    di = DistroInfo('minimal.yml',
+                    local_info=common.get_test_info_path('minimal'))
+    info = di.get_info()
+    finding = query.find_element(info, 'cloud7-openstack-rocky-testing',
+                                 info_key='releases')
+
+    assert(finding)
+    assert(finding == info['releases'][0])
