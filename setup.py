@@ -13,7 +13,13 @@ except ImportError:
     pass
 
 
+# Only require pytest_runner for setup when testing. This uses the
+# recommendation from
+# https://pypi.org/project/pytest-runner/#conditional-requirement
+needs_pytest = {'pytest', 'test', 'ptr'}.intersection(sys.argv)
+pytest_runner = ['pytest-runner'] if needs_pytest else []
+
 setuptools.setup(
-    setup_requires=['pbr', 'pytest-runner'],
+    setup_requires=['pbr'] + pytest_runner,
     tests_require=['pytest'],
     pbr=True)
