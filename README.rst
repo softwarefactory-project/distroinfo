@@ -178,6 +178,30 @@ dictionaries indexed by project/release name for easier access using
     info = di.get_info(info_dicts=True)
     nova = info['packages']['nova']
 
+It is also possible to filter packages matching a given criteria.
+The following query will show all packages matching criteria conf: client AND tags: antelope.
+
+::
+    # rexen is a dictionary of applied filters.
+    # pkg is the currently processed package.
+    info = di.get_info()
+    pkgs = info['packages']
+    rexen = {"conf": "client", "tags": "antelope"}
+
+    finding = query.filter_pkgs(pkgs, rexen)
+
+It is also possible to apply negative filtering with "~" character, which
+can be combined with other filters, like conf: client.
+
+::
+    info = di.get_info()
+    pkgs = info['packages']
+    rexen = {"tags": "~newton", "conf": "client"}
+    finding = query.filter_pkgs(pkgs, rexen)
+
+When using this feature, the output will contain packages WITHOUT newton tag but
+containing conf:client.
+
 Until proper documentation is in place, please refer to:
 
 -  `rdoinfo <https://github.com/redhat-openstack/rdoinfo>`__ for prime

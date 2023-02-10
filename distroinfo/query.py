@@ -100,11 +100,17 @@ def filter_pkgs(pkgs, rexen):
 
 def _match_pkg(rexen, pkg):
     for attr, rex in rexen.items():
+        exclusion = False
+        if rex[0] == "~":
+            exclusion = True
+            rex = rex[1:]
         val = pkg.get(attr)
         if val is None:
             return False
         if isinstance(val, six.string_types):
-            if not re.search(rex, val):
+            if exclusion is False and not re.search(rex, val):
+                return False
+            if exclusion is True and re.search(rex, val):
                 return False
         elif isinstance(val, Iterable):
             # collection matches if any item of collection matches
@@ -113,7 +119,9 @@ def _match_pkg(rexen, pkg):
                 if re.search(rex, e):
                     found = True
                     break
-            if not found:
+            if found is False and exclusion is False:
+                return False
+            elif found is True and exclusion is True:
                 return False
         else:
             raise exception.InvalidPackageFilter(

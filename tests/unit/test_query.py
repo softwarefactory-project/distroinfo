@@ -149,3 +149,18 @@ def test_filter_pkgs_not_found():
     # no package should be found
     assert(isinstance(finding, list))
     assert(len(finding) == 0)
+
+
+def test_exclusion_filter_found():
+    di = DistroInfo('minimal.yml',
+                    local_info=common.get_test_info_path('minimal'))
+    info = di.get_info()
+    pkgs = info['packages']
+    rexen = {"tags": "~newton"}
+
+    finding = query.filter_pkgs(pkgs, rexen)
+
+    assert(finding)
+    assert(isinstance(finding, list))
+    assert(len(finding) == 1)
+    assert("newton" not in finding[0]["tags"])
