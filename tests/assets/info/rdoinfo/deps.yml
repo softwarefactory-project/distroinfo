@@ -14,9 +14,9 @@ package-configs:
   rdo-dependency:
     # This is the conf for dependencies in rdo-common not being entirely managed
     # in review.r.o but using cbs-tags for automatic tagging
-    distgit: https://github.com/rdo-common/%(project)s
+    distgit: http://review.rdoproject.org/r/deps/%(project)s.git
     patches:
-    master-distgit: https://github.com/rdo-common/%(project)s
+    master-distgit: http://review.rdoproject.org/r/deps/%(project)s.git
     review-patches:
     review-origin:
     tags:

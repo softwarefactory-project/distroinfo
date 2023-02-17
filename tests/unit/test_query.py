@@ -107,3 +107,45 @@ def test_find_element_in_sub_dict_list():
 
     assert(finding)
     assert(finding == info['releases'][0])
+
+
+def test_single_filter_pkgs_found():
+    di = DistroInfo('minimal.yml',
+                    local_info=common.get_test_info_path('minimal'))
+    info = di.get_info()
+    pkgs = info['packages']
+
+    rexen = {"project": "keystonemiddleware"}
+    finding = query.filter_pkgs(pkgs, rexen)
+
+    assert(isinstance(finding, list))
+    assert(len(finding) == 1)
+    assert("keystonemiddleware" in finding[0]["name"])
+
+
+def test_multiple_filter_found():
+    di = DistroInfo('minimal.yml',
+                    local_info=common.get_test_info_path('minimal'))
+    info = di.get_info()
+    pkgs = info['packages']
+
+    rexen = {"project": "nova", "maintainers": "sven@redhat.com"}
+    finding = query.filter_pkgs(pkgs, rexen)
+
+    # expected number of foung pkgs is 2
+    assert(isinstance(finding, list))
+    assert(len(finding) == 2)
+
+
+def test_filter_pkgs_not_found():
+    di = DistroInfo('minimal.yml',
+                    local_info=common.get_test_info_path('minimal'))
+    info = di.get_info()
+    pkgs = info['packages']
+
+    rexen = {"project": "nosuchproject", "tags": "newton"}
+    finding = query.filter_pkgs(pkgs, rexen)
+
+    # no package should be found
+    assert(isinstance(finding, list))
+    assert(len(finding) == 0)

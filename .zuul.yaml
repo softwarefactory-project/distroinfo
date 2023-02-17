@@ -59,8 +59,8 @@
     run: playbooks/dlrn-master.yaml
     nodeset:
       nodes:
-        - name: rdo-centos-8
-          label: rdo-centos-8
+        - name: rdo-centos-stream
+          label: rdo-centos-stream
     required-projects:
       - DLRN
 
