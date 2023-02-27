@@ -59,8 +59,9 @@
     run: playbooks/dlrn-master.yaml
     nodeset:
       nodes:
-        - name: rdo-centos-stream
-          label: rdo-centos-stream
+        - name: rdo-centos-8-stream
+          label: rdo-centos-8-stream
+
     required-projects:
       - DLRN
 
@@ -84,4 +85,6 @@
         - distroinfo-dlrn-master
     release:
       jobs:
-        - upload-pypi
+        - upload-pypi:
+            vars:
+              release_python: python3
