@@ -88,3 +88,4 @@
         - upload-pypi:
             vars:
               release_python: python3
+              twine_python: python3
