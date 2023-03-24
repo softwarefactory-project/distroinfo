@@ -146,7 +146,8 @@ class RemoteInfoFetcher(CachedInfoFetcher):
                 path = os.path.join(self.cache_path, fn)
                 base_dir = os.path.dirname(path)
                 helpers.ensure_dir(base_dir)
-                open(path, 'wt').write(req.text)
+                with open(path, 'wt') as f:
+                    f.write(req.text)
             return req.text
         else:
             raise exception.RemoteFetchError(
