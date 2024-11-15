@@ -6,23 +6,26 @@
     - name: Prepare virtualenv to test DLRN master
       shell:
         cmd: |
-          tox -e py36 --notest
+          tox -e py39 --notest
         chdir: "{{ working_dir }}/DLRN"
+
     - name: Inject distroinfo into DLRN master virtualenv
       shell:
         cmd: |
-          . ../DLRN/.tox/py36/bin/activate
-          python setup.py install
+          . ../DLRN/.tox/py39/bin/activate
+          pip install .
         chdir: "{{ working_dir }}/distroinfo"
+
     - name: Run DLRN master tests with distroinfo
       shell:
         cmd: |
           export TAG=""
-          export TARGET="centos8"
+          export TARGET="centos9"
           export ZUUL_BRANCH="rpm-master"
-          export PYTHON_VERSION=py36
-          timeout --signal=SIGKILL 3600 ./scripts/run_tests.sh http://review.rdoproject.org/r/rdoinfo.git ${TARGET} https://trunk.rdoproject.org/centos8/
+          export PYTHON_VERSION=py39
+          timeout --signal=SIGKILL 3600 ./scripts/run_tests.sh http://review.rdoproject.org/r/rdoinfo.git ${TARGET} https://trunk.rdoproject.org/centos9/
         chdir: "{{ working_dir }}/DLRN"
+
     - name: Copy DLRN logs for collection
       shell:
         cmd: |

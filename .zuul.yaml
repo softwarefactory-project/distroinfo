@@ -4,51 +4,31 @@
     parent: tox
     abstract: true
     pre-run: playbooks/base.yaml
+    nodeset:
+      nodes:
+        - name: cloud-centos-9-stream
+          label: cloud-centos-9-stream
 
 - job:
-    name: distroinfo-base-py2
+    name: distroinfo-py39
     parent: distroinfo-base
-    abstract: true
-    nodeset: centos-latest-pod
+    description: distroinfo tests on py3.9
+    vars:
+      tox_envlist: py39
 
 - job:
-    name: distroinfo-base-py3
+    name: distroinfo-py312
     parent: distroinfo-base
-    abstract: true
+    description: distroinfo tests on py3.12
     nodeset: fedora-latest-pod
-
-- job:
-    name: distroinfo-py2-centos
-    parent: distroinfo-base-py2
-    description: distroinfo tests on python2
     vars:
-      tox_envlist: py2-unit
-
-- job:
-    name: distroinfo-py3-fedora
-    parent: distroinfo-base-py3
-    description: distroinfo tests on python3
-    vars:
-      tox_envlist: py3-unit
-
-- job:
-    name: distroinfo-py2-integration
-    parent: distroinfo-base-py2
-    description: distroinfo integration tests with rdoinfo
-    vars:
-      tox_envlist: py2-integration
-
-- job:
-    name: distroinfo-py3-integration
-    parent: distroinfo-base-py3
-    description: distroinfo integration tests with rdoinfo
-    vars:
-      tox_envlist: py3-integration
+      tox_envlist: py312
 
 - job:
     name: distroinfo-codestyle
-    parent: distroinfo-base-py2
+    parent: distroinfo-base
     description: distroinfo code style checks
+    nodeset: fedora-latest-pod
     vars:
       tox_envlist: pycodestyle
 
@@ -59,8 +39,8 @@
     run: playbooks/dlrn-master.yaml
     nodeset:
       nodes:
-        - name: rdo-centos-8-stream
-          label: rdo-centos-8-stream
+        - name: cloud-centos-9-stream
+          label: cloud-centos-9-stream
 
     required-projects:
       - DLRN
@@ -69,18 +49,14 @@
     name: distroinfo
     check:
       jobs:
-        - distroinfo-py2-centos
-        - distroinfo-py3-fedora
-        - distroinfo-py2-integration
-        - distroinfo-py3-integration
+        - distroinfo-py39
+        - distroinfo-py312
         - distroinfo-codestyle
         - distroinfo-dlrn-master
     gate:
       jobs:
-        - distroinfo-py2-centos
-        - distroinfo-py3-fedora
-        - distroinfo-py2-integration
-        - distroinfo-py3-integration
+        - distroinfo-py39
+        - distroinfo-py312
         - distroinfo-codestyle
         - distroinfo-dlrn-master
     release:

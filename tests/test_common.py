@@ -75,7 +75,7 @@ def assert_rdoinfo_deps(info):
         'conf': 'rdo-dependency',
         'upstream': 'https://github.com/sphinx-doc/sphinx',
         'patches': None,
-        'distgit': 'http://review.rdoproject.org/r/deps/python-sphinx.git'
+        'distgit': 'https://review.rdoproject.org/r/deps/python-sphinx.git'
     }
     assert_dict_contains(pkg, expected=sphinx)
     assert 'tags' in pkg

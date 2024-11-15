@@ -18,9 +18,9 @@ def test_attr_diff_base():
             pkg['upstream'] = 'https://opendev.org/openstack/foo'
 
     diff = query.attr_diff(info, info2, 'upstream')
-    assert(len(diff) == 1)
-    assert(diff[0][0] == 'openstack-nova')
-    assert(diff[0][1] == 'https://opendev.org/openstack/foo')
+    assert (len(diff) == 1)
+    assert (diff[0][0] == 'openstack-nova')
+    assert (diff[0][1] == 'https://opendev.org/openstack/foo')
 
 
 def test_attr_diff_nochanges():
@@ -29,7 +29,7 @@ def test_attr_diff_nochanges():
     info = di.get_info()
     info2 = copy.deepcopy(info)
     diff = query.attr_diff(info, info2, 'upstream')
-    assert(len(diff) == 0)
+    assert (len(diff) == 0)
 
 
 def test_attr_diff_nosuchattr():
@@ -43,7 +43,7 @@ def test_attr_diff_nosuchattr():
             pkg['upstream'] = 'https://opendev.org/openstack/foo'
 
     diff = query.attr_diff(info, info2, 'fooattr')
-    assert(len(diff) == 0)
+    assert (len(diff) == 0)
 
 
 def test_attr_diff_newpkg():
@@ -59,9 +59,9 @@ def test_attr_diff_newpkg():
     info2['packages'].append(newpkg)
 
     diff = query.attr_diff(info, info2, 'master-distgit')
-    assert(len(diff) == 1)
-    assert(diff[0][0] == 'openstack-newproject')
-    assert(diff[0][1] == 'https://github.com/rdo-packages/new-distgit')
+    assert (len(diff) == 1)
+    assert (diff[0][0] == 'openstack-newproject')
+    assert (diff[0][1] == 'https://github.com/rdo-packages/new-distgit')
 
 
 def test_attr_diff_2_diffs():
@@ -77,7 +77,7 @@ def test_attr_diff_2_diffs():
             pkg['upstream'] = 'https://opendev.org/openstack/foo-cinder'
 
     diff = query.attr_diff(info, info2, 'upstream')
-    assert(len(diff) == 2)
+    assert (len(diff) == 2)
 
 
 def test_find_element_ok():
@@ -87,8 +87,8 @@ def test_find_element_ok():
     finding = query.find_element(info, 'queens',
                                  info_key='releases')
 
-    assert(finding)
-    assert(finding == info['releases'][1])
+    assert (finding)
+    assert (finding == info['releases'][1])
 
 
 def test_find_element_not_found():
@@ -97,7 +97,7 @@ def test_find_element_not_found():
     info = di.get_info()
     finding = query.find_element(info, 'aabb',
                                  info_key='releases')
-    assert(not finding)
+    assert (not finding)
 
 
 @unittest.skipIf(six.PY2, "Test fails randomly in python2")
@@ -108,8 +108,8 @@ def test_find_element_in_sub_dict_list():
     finding = query.find_element(info, 'cloud7-openstack-rocky-testing',
                                  info_key='releases')
 
-    assert(finding)
-    assert(finding == info['releases'][0])
+    assert (finding)
+    assert (finding == info['releases'][0])
 
 
 def test_single_filter_pkgs_found():
@@ -121,9 +121,9 @@ def test_single_filter_pkgs_found():
     rexen = {"project": "keystonemiddleware"}
     finding = query.filter_pkgs(pkgs, rexen)
 
-    assert(isinstance(finding, list))
-    assert(len(finding) == 1)
-    assert("keystonemiddleware" in finding[0]["name"])
+    assert (isinstance(finding, list))
+    assert (len(finding) == 1)
+    assert ("keystonemiddleware" in finding[0]["name"])
 
 
 def test_multiple_filter_found():
@@ -136,8 +136,8 @@ def test_multiple_filter_found():
     finding = query.filter_pkgs(pkgs, rexen)
 
     # expected number of foung pkgs is 2
-    assert(isinstance(finding, list))
-    assert(len(finding) == 2)
+    assert (isinstance(finding, list))
+    assert (len(finding) == 2)
 
 
 def test_filter_pkgs_not_found():
@@ -150,8 +150,8 @@ def test_filter_pkgs_not_found():
     finding = query.filter_pkgs(pkgs, rexen)
 
     # no package should be found
-    assert(isinstance(finding, list))
-    assert(len(finding) == 0)
+    assert (isinstance(finding, list))
+    assert (len(finding) == 0)
 
 
 def test_exclusion_filter_found():
@@ -163,7 +163,7 @@ def test_exclusion_filter_found():
 
     finding = query.filter_pkgs(pkgs, rexen)
 
-    assert(finding)
-    assert(isinstance(finding, list))
-    assert(len(finding) == 1)
-    assert("newton" not in finding[0]["tags"])
+    assert (finding)
+    assert (isinstance(finding, list))
+    assert (len(finding) == 1)
+    assert ("newton" not in finding[0]["tags"])
